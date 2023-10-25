@@ -1,7 +1,9 @@
 v {xschem version=3.4.3 file_version=1.2
 }
 G {}
-K {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"}
 V {}
 S {type=subcircuit
 format="@name @pinlist @symname"
@@ -55,3 +57,8 @@ T {D3} -35 -2.5 0 0 0.1 0.1 {}
 T {D4} -35 7.5 0 0 0.1 0.1 {}
 T {D5} -35 17.5 0 0 0.1 0.1 {}
 T {D6} -35 27.5 0 0 0.1 0.1 {}
+T {VP} -5 -47.5 0 0 0.2 0.2 {}
+T {VN} -5 37.5 0 0 0.2 0.2 {}
+T {Vg} -25 -47.5 0 0 0.2 0.2 {}
+T {Ib} 15 -47.5 0 0 0.2 0.2 {}
+T {Iout} 15 -7.5 0 0 0.2 0.2 {}
