@@ -71,7 +71,7 @@ C {devices/lab_pin.sym} 355 -245 1 0 {name=p17 sig_type=std_logic lab=Vg}
 C {madvlsi/vsource.sym} 240 -55 0 0 {name=Viout
 value=0}
 C {madvlsi/gnd.sym} 240 -25 0 0 {name=l14 lab=GND}
-C {devices/code.sym} 550 -270 0 0 {name="CONTROL CODE" only_toplevel=false value="
+C {devices/code.sym} 550 -270 0 0 {name=CONTROLLER only_toplevel=false value="
 .control
 set wr_vecnames
 set wr_singlescale
@@ -128,7 +128,7 @@ dowhile run <= mc_runs
 
     save all
     op
-    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/M_2M_DAC/simulation_results/M_2M_DAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Viout)
+    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulation_results/M_2M_DAC/M_2M_DAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Viout)
     if code eq 0
       set appendwrite
       set wr_vecnames = FALSE
