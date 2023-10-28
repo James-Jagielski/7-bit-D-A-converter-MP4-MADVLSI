@@ -127,8 +127,8 @@ dowhile run <= mc_runs
     alter V4 $&b4
     alter V5 $&b5
     alter V6 $&b6
-    op
     save all
+    op
     
     wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/simulation_results/ieee_DAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Vib) i(Viout)
     if code eq 0
