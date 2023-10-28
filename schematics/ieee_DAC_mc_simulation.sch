@@ -11,11 +11,13 @@ N 200 -240 235 -240 {
 lab=#net2}
 N 235 -240 235 -230 {
 lab=#net2}
+N 120 -400 140 -400 {
+lab=VDD}
 C {madvlsi/isource.sym} 160 -445 0 0 {name=I1
-value=1n}
+value=100n}
 C {madvlsi/vdd.sym} 140 -400 0 0 {name=l1 lab=VDD}
 C {madvlsi/vdd.sym} 160 -475 0 0 {name=l2 lab=VDD}
-C {devices/lab_pin.sym} 120 -400 0 0 {name=p1 sig_type=std_logic lab=Vg}
+C {devices/lab_pin.sym} 50 -430 0 0 {name=p1 sig_type=std_logic lab=Vg}
 C {madvlsi/gnd.sym} 140 -200 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 80 -340 0 0 {name=p3 sig_type=std_logic lab=V1}
 C {devices/lab_pin.sym} 80 -320 0 0 {name=p4 sig_type=std_logic lab=V2}
@@ -51,7 +53,7 @@ value=1.8}
 C {madvlsi/vsource.sym} 385 -85 0 0 {name=V4
 value=1.8}
 C {madvlsi/vsource.sym} 475 -85 0 0 {name=V5
-value=0}
+value=1.8}
 C {madvlsi/vsource.sym} 565 -85 0 0 {name=V6
 value=1.8}
 C {madvlsi/vsource.sym} 35 -85 0 0 {name=V0
@@ -64,7 +66,7 @@ value=".option wnflag=1
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
 C {madvlsi/vsource.sym} 350 -450 0 0 {name=Vg
-value=0.7}
+value=1.4}
 C {madvlsi/gnd.sym} 350 -420 0 0 {name=l13 lab=GND}
 C {devices/lab_pin.sym} 350 -480 1 0 {name=p17 sig_type=std_logic lab=Vg}
 C {madvlsi/vsource.sym} 235 -200 0 0 {name=Viout
@@ -124,9 +126,9 @@ dowhile run <= mc_runs
     alter V4 $&b4
     alter V5 $&b5
     alter V6 $&b6
-
-    save all
     op
+    save all
+    
     wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/simulation_results/ieee_DAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Viout)
     if code eq 0
       set appendwrite
