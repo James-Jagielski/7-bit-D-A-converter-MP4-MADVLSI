@@ -5,73 +5,71 @@ K {}
 V {}
 S {}
 E {}
-N 165 -180 165 -165 {
+N 165 -440 165 -425 {
 lab=#net1}
-N 205 -95 240 -95 {
+N 205 -265 240 -265 {
 lab=#net2}
-N 240 -95 240 -85 {
-lab=#net2}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/M_2M_DAC.sym} 145 -95 0 0 {}
-C {madvlsi/isource.sym} 165 -210 0 0 {name=I1
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/M_2M_DAC.sym} 145 -355 0 0 {}
+C {madvlsi/isource.sym} 165 -470 0 0 {name=I1
 value=1n}
-C {madvlsi/vdd.sym} 145 -165 0 0 {name=l1 lab=VDD}
-C {madvlsi/vdd.sym} 165 -240 0 0 {name=l2 lab=VDD}
-C {devices/lab_pin.sym} 125 -165 0 0 {name=p1 sig_type=std_logic lab=Vg}
-C {madvlsi/gnd.sym} 145 -25 0 0 {name=l3 lab=GND}
-C {devices/lab_pin.sym} 85 -115 0 0 {name=p3 sig_type=std_logic lab=V1}
-C {devices/lab_pin.sym} 85 -105 0 0 {name=p4 sig_type=std_logic lab=V2}
-C {devices/lab_pin.sym} 85 -95 0 0 {name=p5 sig_type=std_logic lab=V3}
-C {devices/lab_pin.sym} 85 -85 0 0 {name=p6 sig_type=std_logic lab=V4}
-C {devices/lab_pin.sym} 85 -75 0 0 {name=p7 sig_type=std_logic lab=V5}
-C {devices/lab_pin.sym} 85 -65 0 0 {name=p8 sig_type=std_logic lab=V6}
-C {devices/lab_pin.sym} 85 -125 0 0 {name=p9 sig_type=std_logic lab=V0}
-C {madvlsi/vsource.sym} 275 -215 0 0 {name=Vdd
+C {madvlsi/vdd.sym} 145 -425 0 0 {name=l1 lab=VDD}
+C {madvlsi/vdd.sym} 165 -500 0 0 {name=l2 lab=VDD}
+C {devices/lab_pin.sym} 125 -425 0 0 {name=p1 sig_type=std_logic lab=Vg}
+C {madvlsi/gnd.sym} 145 -225 0 0 {name=l3 lab=GND}
+C {devices/lab_pin.sym} 85 -365 0 0 {name=p3 sig_type=std_logic lab=V1}
+C {devices/lab_pin.sym} 85 -345 0 0 {name=p4 sig_type=std_logic lab=V2}
+C {devices/lab_pin.sym} 85 -325 0 0 {name=p5 sig_type=std_logic lab=V3}
+C {devices/lab_pin.sym} 85 -305 0 0 {name=p6 sig_type=std_logic lab=V4}
+C {devices/lab_pin.sym} 85 -285 0 0 {name=p7 sig_type=std_logic lab=V5}
+C {devices/lab_pin.sym} 85 -265 0 0 {name=p8 sig_type=std_logic lab=V6}
+C {devices/lab_pin.sym} 85 -385 0 0 {name=p9 sig_type=std_logic lab=V0}
+C {madvlsi/vsource.sym} 275 -475 0 0 {name=Vdd
 value=1.8}
-C {madvlsi/gnd.sym} 275 -185 0 0 {name=l4 lab=GND}
-C {madvlsi/vdd.sym} 275 -245 0 0 {name=l5 lab=VDD}
-C {madvlsi/gnd.sym} 120 130 0 0 {name=l6 lab=GND}
-C {madvlsi/gnd.sym} 210 130 0 0 {name=l7 lab=GND}
-C {madvlsi/gnd.sym} 300 130 0 0 {name=l8 lab=GND}
-C {madvlsi/gnd.sym} 390 130 0 0 {name=l9 lab=GND}
-C {madvlsi/gnd.sym} 480 130 0 0 {name=l10 lab=GND}
-C {madvlsi/gnd.sym} 570 130 0 0 {name=l11 lab=GND}
-C {madvlsi/gnd.sym} 40 130 0 0 {name=l12 lab=GND}
-C {devices/lab_pin.sym} 120 70 1 0 {name=p10 sig_type=std_logic lab=V1}
-C {devices/lab_pin.sym} 210 70 1 0 {name=p11 sig_type=std_logic lab=V2}
-C {devices/lab_pin.sym} 300 70 1 0 {name=p12 sig_type=std_logic lab=V3}
-C {devices/lab_pin.sym} 390 70 1 0 {name=p13 sig_type=std_logic lab=V4}
-C {devices/lab_pin.sym} 480 70 1 0 {name=p14 sig_type=std_logic lab=V5}
-C {devices/lab_pin.sym} 570 70 1 0 {name=p15 sig_type=std_logic lab=V6}
-C {devices/lab_pin.sym} 40 70 1 0 {name=p16 sig_type=std_logic lab=V0}
-C {madvlsi/vsource.sym} 120 100 0 0 {name=V1
+C {madvlsi/gnd.sym} 275 -445 0 0 {name=l4 lab=GND}
+C {madvlsi/vdd.sym} 275 -505 0 0 {name=l5 lab=VDD}
+C {madvlsi/gnd.sym} 120 -60 0 0 {name=l6 lab=GND}
+C {madvlsi/gnd.sym} 210 -60 0 0 {name=l7 lab=GND}
+C {madvlsi/gnd.sym} 300 -60 0 0 {name=l8 lab=GND}
+C {madvlsi/gnd.sym} 390 -60 0 0 {name=l9 lab=GND}
+C {madvlsi/gnd.sym} 480 -60 0 0 {name=l10 lab=GND}
+C {madvlsi/gnd.sym} 570 -60 0 0 {name=l11 lab=GND}
+C {madvlsi/gnd.sym} 40 -60 0 0 {name=l12 lab=GND}
+C {devices/lab_pin.sym} 120 -120 1 0 {name=p10 sig_type=std_logic lab=V1}
+C {devices/lab_pin.sym} 210 -120 1 0 {name=p11 sig_type=std_logic lab=V2}
+C {devices/lab_pin.sym} 300 -120 1 0 {name=p12 sig_type=std_logic lab=V3}
+C {devices/lab_pin.sym} 390 -120 1 0 {name=p13 sig_type=std_logic lab=V4}
+C {devices/lab_pin.sym} 480 -120 1 0 {name=p14 sig_type=std_logic lab=V5}
+C {devices/lab_pin.sym} 570 -120 1 0 {name=p15 sig_type=std_logic lab=V6}
+C {devices/lab_pin.sym} 40 -120 1 0 {name=p16 sig_type=std_logic lab=V0}
+C {madvlsi/vsource.sym} 120 -90 0 0 {name=V1
 value=1.8}
-C {madvlsi/vsource.sym} 210 100 0 0 {name=V2
+C {madvlsi/vsource.sym} 210 -90 0 0 {name=V2
 value=1.8}
-C {madvlsi/vsource.sym} 300 100 0 0 {name=V3
+C {madvlsi/vsource.sym} 300 -90 0 0 {name=V3
 value=1.8}
-C {madvlsi/vsource.sym} 390 100 0 0 {name=V4
+C {madvlsi/vsource.sym} 390 -90 0 0 {name=V4
 value=1.8}
-C {madvlsi/vsource.sym} 480 100 0 0 {name=V5
+C {madvlsi/vsource.sym} 480 -90 0 0 {name=V5
 value=0}
-C {madvlsi/vsource.sym} 570 100 0 0 {name=V6
+C {madvlsi/vsource.sym} 570 -90 0 0 {name=V6
 value=1.8}
-C {madvlsi/vsource.sym} 40 100 0 0 {name=V0
+C {madvlsi/vsource.sym} 40 -90 0 0 {name=V0
 value=1.8}
-C {madvlsi/tt_models.sym} 410 -270 0 0 {
+C {madvlsi/tt_models.sym} 410 -530 0 0 {
 name=TT_MODELS
 only_toplevel=false
 value=".option wnflag=1
 .param MC_SWITCH=0.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {madvlsi/vsource.sym} 355 -215 0 0 {name=Vg
+C {madvlsi/vsource.sym} 355 -475 0 0 {name=Vg
 value=0.7}
-C {madvlsi/gnd.sym} 355 -185 0 0 {name=l13 lab=GND}
-C {devices/lab_pin.sym} 355 -245 1 0 {name=p17 sig_type=std_logic lab=Vg}
-C {madvlsi/vsource.sym} 240 -55 0 0 {name=Viout
+C {madvlsi/gnd.sym} 355 -445 0 0 {name=l13 lab=GND}
+C {devices/lab_pin.sym} 355 -505 1 0 {name=p17 sig_type=std_logic lab=Vg}
+C {madvlsi/vsource.sym} 240 -235 0 0 {name=Viout
 value=0}
-C {madvlsi/gnd.sym} 240 -25 0 0 {name=l14 lab=GND}
-C {devices/code.sym} 550 -270 0 0 {name="CONTROL CODE" only_toplevel=false value="
+C {madvlsi/gnd.sym} 240 -205 0 0 {name=l14 lab=GND}
+C {devices/code.sym} 550 -530 0 0 {name="CONTROL CODE" only_toplevel=false value="
 .control
 set wr_vecnames
 set wr_singlescale
