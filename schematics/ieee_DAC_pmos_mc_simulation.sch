@@ -14,7 +14,6 @@ lab=#net2}
 N 160 -430 160 -400 {
 lab=#net3}
 C {madvlsi/vdd.sym} 140 -400 0 0 {name=l1 lab=VDD}
-C {madvlsi/vdd.sym} 160 -515 0 0 {name=l2 lab=VDD}
 C {madvlsi/gnd.sym} 140 -200 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 80 -340 0 0 {name=p3 sig_type=std_logic lab=V1}
 C {devices/lab_pin.sym} 80 -320 0 0 {name=p4 sig_type=std_logic lab=V2}
@@ -127,7 +126,7 @@ dowhile run <= mc_runs
     save all
     op
     
-    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/bias_current_test_results_2/ieeeDAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Vib) i(Viout)
+    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/pmos_bias_current_test_results_1/ieeeDAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Vib) i(Viout)
     if code eq 0
       set appendwrite
       set wr_vecnames = FALSE
@@ -146,7 +145,8 @@ end
 
 quit
 .endc"}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee_simple_M_2M_DAC.sym} 140 -330 0 0 {name=x1}
 C {madvlsi/ammeter2.sym} 160 -440 0 0 {name=Vib}
-C {madvlsi/isource.sym} 160 -485 0 0 {name=I1
-value=30n}
+C {madvlsi/isource.sym} 160 -485 2 0 {name=I1
+value=100n}
+C {madvlsi/gnd.sym} 160 -515 2 0 {name=l2 lab=GND}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee_simple_M_2M_DAC_pmos.sym} 140 -330 0 0 {name=x1}
