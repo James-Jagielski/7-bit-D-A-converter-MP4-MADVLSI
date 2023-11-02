@@ -5,19 +5,16 @@ K {}
 V {}
 S {}
 E {}
-N 160 -415 160 -400 {
-lab=#net1}
 N 200 -240 235 -240 {
-lab=#net2}
+lab=#net1}
 N 235 -240 235 -230 {
+lab=#net1}
+N 160 -455 160 -440 {
 lab=#net2}
-N 120 -400 140 -400 {
-lab=VDD}
-C {madvlsi/isource.sym} 160 -445 0 0 {name=I1
-value=100n}
+N 160 -430 160 -400 {
+lab=#net3}
 C {madvlsi/vdd.sym} 140 -400 0 0 {name=l1 lab=VDD}
-C {madvlsi/vdd.sym} 160 -475 0 0 {name=l2 lab=VDD}
-C {devices/lab_pin.sym} 50 -430 0 0 {name=p1 sig_type=std_logic lab=Vg}
+C {madvlsi/vdd.sym} 160 -515 0 0 {name=l2 lab=VDD}
 C {madvlsi/gnd.sym} 140 -200 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 80 -340 0 0 {name=p3 sig_type=std_logic lab=V1}
 C {devices/lab_pin.sym} 80 -320 0 0 {name=p4 sig_type=std_logic lab=V2}
@@ -62,13 +59,9 @@ C {madvlsi/tt_models.sym} 405 -505 0 0 {
 name=TT_MODELS
 only_toplevel=false
 value=".option wnflag=1
-.param MC_SWITCH=0.0
+.param MC_SWITCH=1.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {madvlsi/vsource.sym} 350 -450 0 0 {name=Vg
-value=1.4}
-C {madvlsi/gnd.sym} 350 -420 0 0 {name=l13 lab=GND}
-C {devices/lab_pin.sym} 350 -480 1 0 {name=p17 sig_type=std_logic lab=Vg}
 C {madvlsi/vsource.sym} 235 -200 0 0 {name=Viout
 value=0}
 C {madvlsi/gnd.sym} 235 -170 0 0 {name=l14 lab=GND}
@@ -77,7 +70,12 @@ C {devices/code.sym} 545 -505 0 0 {name="CONTROL CODE" only_toplevel=false value
 set wr_vecnames
 set wr_singlescale
 
-let mc_runs = 1
+let Ibias_max = 31n
+let Ibias = 30n
+dowhile Ibias < Ibias_max
+alter Ib $&Ibias
+
+let mc_runs = 10
 let run = 1
 dowhile run <= mc_runs
 
@@ -126,10 +124,10 @@ dowhile run <= mc_runs
     alter V4 $&b4
     alter V5 $&b5
     alter V6 $&b6
-    op
     save all
+    op
     
-    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/simulation_results/ieee_DAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Viout)
+    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/bias_current_test_results_2/ieeeDAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Vib) i(Viout)
     if code eq 0
       set appendwrite
       set wr_vecnames = FALSE
@@ -142,6 +140,13 @@ dowhile run <= mc_runs
   set wr_vecnames
   let run = run + 1
 end
+
+let Ibias = Ibias * 2
+end
+
 quit
 .endc"}
 C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee_simple_M_2M_DAC.sym} 140 -330 0 0 {name=x1}
+C {madvlsi/ammeter2.sym} 160 -440 0 0 {name=Vib}
+C {madvlsi/isource.sym} 160 -485 0 0 {name=I1
+value=30n}

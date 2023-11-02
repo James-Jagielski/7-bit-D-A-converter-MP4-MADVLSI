@@ -73,6 +73,8 @@ N 260 130 380 130 {
 lab=#net6}
 N 180 -40 260 -40 {
 lab=D1}
+N 370 -150 450 -150 {}
+N 450 -150 450 -120 {}
 C {devices/ipin.sym} 480 -120 1 0 {name=p3 lab=Ibias}
 C {devices/opin.sym} 550 150 0 0 {name=p4 lab=Iout}
 C {devices/ipin.sym} 300 -70 0 0 {name=p5 lab=D0}
@@ -82,7 +84,6 @@ C {devices/ipin.sym} 180 50 0 0 {name=p8 lab=D3}
 C {devices/ipin.sym} 300 90 0 0 {name=p9 lab=D4}
 C {devices/ipin.sym} 180 130 0 0 {name=p10 lab=D5}
 C {devices/ipin.sym} 300 170 0 0 {name=p11 lab=D6}
-C {devices/ipin.sym} 450 -120 1 0 {name=p12 lab=Vg}
 C {devices/iopin.sym} 120 -100 2 0 {name=p15 lab=VDD}
 C {devices/iopin.sym} 120 -70 2 0 {name=p16 lab=GND}
 C {devices/lab_pin.sym} 330 -90 0 0 {name=p1 sig_type=std_logic lab=VDD}
@@ -110,3 +111,7 @@ C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/inverter.sym
 C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/inverter.sym} 330 170 0 0 {name=x8}
 C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee_DAC.sym} 530 60 0 0 {name=x9}
 C {devices/lab_pin.sym} 550 170 2 0 {name=p2 sig_type=std_logic lab=GND}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/inverter.sym} 330 -150 0 0 {name=x1}
+C {devices/lab_pin.sym} 330 -170 0 0 {name=p31 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 330 -130 0 0 {name=p30 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} 300 -150 0 0 {name=p32 sig_type=std_logic lab=GND}
