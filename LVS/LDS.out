@@ -1,0 +1,19 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Class LDS_ieee_DAC.spice (1):  Merged 29 parallel devices.
+Subcircuit summary:
+Circuit 1: ieee_DAC.spice                  |Circuit 2: LDS_ieee_DAC.spice              
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (29)               |sky130_fd_pr__nfet_01v8 (58->29)           
+Number of devices: 29                      |Number of devices: 29                      
+Number of nets: 33                         |Number of nets: 33                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes ieee_DAC.spice and LDS_ieee_DAC.spice are equivalent.
+
+Final result: Circuits match uniquely.
+.
