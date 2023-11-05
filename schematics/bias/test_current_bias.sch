@@ -7,6 +7,8 @@ S {}
 E {}
 N 30 -90 70 -90 {
 lab=#net1}
+N 70 -90 100 -90 {}
+N 100 -90 100 -60 {}
 C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias.sym} -20 -90 0 0 {name=x1}
 C {madvlsi/vsource.sym} 360 -100 0 0 {name=VDD
 value=1.8}
@@ -14,22 +16,6 @@ C {madvlsi/vdd.sym} 360 -130 0 0 {name=l1 lab=VDD}
 C {madvlsi/vdd.sym} -20 -140 0 0 {name=l2 lab=VDD}
 C {madvlsi/gnd.sym} 360 -70 0 0 {name=l3 lab=GND}
 C {madvlsi/gnd.sym} -20 -40 0 0 {name=l4 lab=GND}
-C {madvlsi/nmos3.sym} 100 -90 0 0 {name=M1
-L=0.5
-W=12
-body=GND
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {madvlsi/vdd.sym} 100 -120 0 0 {name=l5 lab=VDD}
 C {madvlsi/gnd.sym} 100 0 0 0 {name=l6 lab=GND}
 C {madvlsi/vsource.sym} 100 -30 0 0 {name=Viout
 value=0}
@@ -40,5 +26,5 @@ value=".option wnflag=1
 .param MC_SWITCH=0.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {devices/code_shown.sym} 470 -20 0 0 {name=s1 only_toplevel=false value=".dc VDD 0 1.8 0.01
+C {devices/code_shown.sym} 470 -20 0 0 {name=SPICE only_toplevel=false value=".dc VDD 0 1.8 0.01
 .save all"}

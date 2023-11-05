@@ -65,8 +65,10 @@ N 140 40 280 40 {
 lab=#net2}
 N 310 -80 310 10 {
 lab=#net6}
-N 140 -110 280 -110 {}
-N 170 -140 310 -140 {}
+N 140 -110 280 -110 {
+lab=#net4}
+N 170 -140 310 -140 {
+lab=VDD}
 C {madvlsi/nmos3.sym} -190 40 0 1 {name=M4
 L=0.5
 W=12
@@ -205,7 +207,7 @@ value=".option wnflag=1
 .param MC_SWITCH=0.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {devices/code_shown.sym} 580 80 0 0 {name=s1 only_toplevel=false value=".dc VDD 0 1.8 0.01
+C {devices/code_shown.sym} 580 80 0 0 {name=SPICE only_toplevel=false value=".dc VDD 0 1.8 0.01
 .save all"}
 C {madvlsi/nmos3.sym} 310 40 0 0 {name=M1
 L=0.5

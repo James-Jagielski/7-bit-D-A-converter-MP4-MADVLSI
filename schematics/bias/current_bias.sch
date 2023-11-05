@@ -12,11 +12,11 @@ lab=#net1}
 N -190 10 -140 10 {
 lab=#net1}
 N 90 40 140 40 {
-lab=xxx}
+lab=#net2}
 N 120 10 120 40 {
-lab=xxx}
+lab=#net2}
 N 120 10 170 10 {
-lab=xxx}
+lab=#net2}
 N -80 70 60 70 {
 lab=VN}
 N -190 130 -20 130 {
@@ -24,25 +24,25 @@ lab=VN}
 N -190 -80 -190 10 {
 lab=#net1}
 N -50 -110 30 -110 {
-lab=#net2}
+lab=#net3}
 N -20 -110 -20 -80 {
-lab=#net2}
+lab=#net3}
 N -80 -80 -20 -80 {
-lab=#net2}
+lab=#net3}
 N -80 -80 -80 10 {
-lab=#net2}
+lab=#net3}
 N 60 -80 60 10 {
-lab=#net3}
+lab=#net4}
 N 170 -80 170 10 {
-lab=xxx}
+lab=#net2}
 N 140 -110 140 -40 {
-lab=#net3}
+lab=#net4}
 N 60 -40 140 -40 {
-lab=#net3}
+lab=#net4}
 N -160 -40 60 -40 {
-lab=#net3}
+lab=#net4}
 N -160 -110 -160 -40 {
-lab=#net3}
+lab=#net4}
 N -190 -140 -80 -140 {
 lab=VP}
 N -80 -140 -20 -140 {
@@ -57,6 +57,14 @@ N 170 70 170 130 {
 lab=VN}
 N -10 70 -10 130 {
 lab=VN}
+N 140 -110 240 -110 {
+lab=#net4}
+N 170 -140 270 -140 {
+lab=VP}
+N 140 40 240 40 {
+lab=#net2}
+N 270 -80 270 10 {
+lab=#net5}
 C {madvlsi/nmos3.sym} -190 40 0 1 {name=M4
 L=0.5
 W=12
@@ -182,4 +190,34 @@ spiceprefix=X
 }
 C {devices/iopin.sym} 0 -140 3 0 {name=p1 lab=VP}
 C {devices/iopin.sym} -10 130 1 0 {name=p2 lab=VN}
-C {devices/opin.sym} 170 -20 0 0 {name=p3 lab=Vb}
+C {madvlsi/pmos3.sym} 270 -110 0 0 {name=M1
+L=0.5
+W=12
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {devices/opin.sym} 270 70 1 0 {name=p4 lab=Vb}
+C {madvlsi/nmos3.sym} 270 40 0 0 {name=M2
+L=0.5
+W=12
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
