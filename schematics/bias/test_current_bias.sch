@@ -50,7 +50,7 @@ value=".option wnflag=1
 .param MC_SWITCH=0.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {devices/code_shown.sym} 470 -20 0 0 {name=SPICE only_toplevel=false value=".dc VDD 0 1.8 0.01
+C {devices/code_shown.sym} 470 -20 0 0 {name=s1 only_toplevel=false value=".dc VDD 0 1.8 0.01
 .save all"}
 C {madvlsi/pmos3.sym} 100 -210 0 1 {name=M2
 L=0.5
