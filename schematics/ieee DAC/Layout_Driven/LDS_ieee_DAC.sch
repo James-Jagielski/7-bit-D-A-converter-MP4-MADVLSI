@@ -18,7 +18,7 @@ lab=Ibias}
 N 2160 340 2200 340 {
 lab=#net2}
 N 2060 340 2100 340 {
-lab=Idump}
+lab=GND}
 N 1960 340 2000 340 {
 lab=#net2}
 N 1980 290 1980 340 {
@@ -38,35 +38,35 @@ lab=Iout}
 N 1860 170 1900 170 {
 lab=#net1}
 N 1800 140 1800 170 {
-lab=Idump}
+lab=GND}
 N 1800 140 1830 140 {
-lab=Idump}
+lab=GND}
 N 2260 170 2300 170 {
 lab=#net1}
 N 2330 140 2360 140 {
-lab=Idump}
+lab=GND}
 N 2360 140 2360 170 {
-lab=Idump}
+lab=GND}
 N 1800 310 1800 340 {
-lab=Idump}
+lab=GND}
 N 1800 310 1830 310 {
-lab=Idump}
+lab=GND}
 N 1860 340 1900 340 {
 lab=Iout}
 N 2260 340 2300 340 {
 lab=Iout}
 N 2330 310 2360 310 {
-lab=Idump}
+lab=GND}
 N 2360 310 2360 340 {
-lab=Idump}
+lab=GND}
 N 1800 340 1800 380 {
-lab=Idump}
+lab=GND}
 N 2330 140 2330 310 {
-lab=Idump}
+lab=GND}
 N 1830 140 1830 310 {
-lab=Idump}
+lab=GND}
 N 1760 440 1800 440 {
-lab=Idump}
+lab=GND}
 N 2260 80 2260 170 {
 lab=#net1}
 N 2180 100 2180 170 {
@@ -86,11 +86,11 @@ lab=Vg}
 N 2030 120 2030 140 {
 lab=Vg}
 N 1800 380 1800 440 {
-lab=Idump}
+lab=GND}
 N 1800 440 2360 440 {
-lab=Idump}
+lab=GND}
 N 2080 340 2080 440 {
-lab=Idump}
+lab=GND}
 N 1930 260 1930 310 {
 lab=D0}
 N 1930 260 2230 260 {
@@ -124,7 +124,7 @@ lab=#net1}
 N 2720 340 2760 340 {
 lab=#net4}
 N 2620 340 2660 340 {
-lab=Idump}
+lab=GND}
 N 2520 340 2560 340 {
 lab=#net4}
 N 2540 290 2540 340 {
@@ -144,31 +144,31 @@ lab=Iout}
 N 2420 170 2460 170 {
 lab=#net3}
 N 2360 140 2360 170 {
-lab=Idump}
+lab=GND}
 N 2360 140 2390 140 {
-lab=Idump}
+lab=GND}
 N 2820 170 2860 170 {
 lab=#net3}
 N 2890 140 2920 140 {
-lab=Idump}
+lab=GND}
 N 2920 140 2920 170 {
-lab=Idump}
+lab=GND}
 N 2360 310 2360 340 {
-lab=Idump}
+lab=GND}
 N 2360 310 2390 310 {
-lab=Idump}
+lab=GND}
 N 2420 340 2460 340 {
 lab=Iout}
 N 2820 340 2860 340 {
 lab=Iout}
 N 2890 310 2920 310 {
-lab=Idump}
+lab=GND}
 N 2920 310 2920 340 {
-lab=Idump}
+lab=GND}
 N 2890 140 2890 310 {
-lab=Idump}
+lab=GND}
 N 2390 140 2390 310 {
-lab=Idump}
+lab=GND}
 N 2820 80 2820 170 {
 lab=#net3}
 N 2740 100 2740 170 {
@@ -188,9 +188,9 @@ lab=Vg}
 N 2590 120 2590 140 {
 lab=Vg}
 N 2360 440 2920 440 {
-lab=Idump}
+lab=GND}
 N 2640 340 2640 440 {
-lab=Idump}
+lab=GND}
 N 2490 260 2490 310 {
 lab=D1}
 N 2490 260 2790 260 {
@@ -210,7 +210,7 @@ lab=D1b}
 N 2230 120 2490 120 {
 lab=Vg}
 N 2360 340 2360 440 {
-lab=Idump}
+lab=GND}
 N 1760 100 1980 100 {
 lab=Ibias}
 N 2260 100 2540 100 {
@@ -228,7 +228,7 @@ lab=#net3}
 N 3280 340 3320 340 {
 lab=#net6}
 N 3180 340 3220 340 {
-lab=Idump}
+lab=GND}
 N 3080 340 3120 340 {
 lab=#net6}
 N 3100 290 3100 340 {
@@ -248,33 +248,33 @@ lab=Iout}
 N 2980 170 3020 170 {
 lab=#net5}
 N 2920 140 2920 170 {
-lab=Idump}
+lab=GND}
 N 2920 140 2950 140 {
-lab=Idump}
+lab=GND}
 N 3380 170 3420 170 {
 lab=#net5}
 N 3450 140 3480 140 {
-lab=Idump}
+lab=GND}
 N 3480 140 3480 170 {
-lab=Idump}
+lab=GND}
 N 2920 310 2920 340 {
-lab=Idump}
+lab=GND}
 N 2920 310 2950 310 {
-lab=Idump}
+lab=GND}
 N 2980 340 3020 340 {
 lab=Iout}
 N 3380 340 3420 340 {
 lab=Iout}
 N 3450 310 3480 310 {
-lab=Idump}
+lab=GND}
 N 3480 310 3480 340 {
-lab=Idump}
+lab=GND}
 N 2920 340 2920 380 {
-lab=Idump}
+lab=GND}
 N 3450 140 3450 310 {
-lab=Idump}
+lab=GND}
 N 2950 140 2950 310 {
-lab=Idump}
+lab=GND}
 N 3380 80 3380 170 {
 lab=#net5}
 N 3300 100 3300 170 {
@@ -294,11 +294,11 @@ lab=Vg}
 N 3150 120 3150 140 {
 lab=Vg}
 N 2920 380 2920 440 {
-lab=Idump}
+lab=GND}
 N 2920 440 3480 440 {
-lab=Idump}
+lab=GND}
 N 3200 340 3200 440 {
-lab=Idump}
+lab=GND}
 N 3050 260 3050 310 {
 lab=D2}
 N 3050 260 3350 260 {
@@ -328,7 +328,7 @@ lab=#net5}
 N 3840 340 3880 340 {
 lab=#net8}
 N 3740 340 3780 340 {
-lab=Idump}
+lab=GND}
 N 3640 340 3680 340 {
 lab=#net8}
 N 3660 290 3660 340 {
@@ -348,31 +348,31 @@ lab=Iout}
 N 3540 170 3580 170 {
 lab=#net7}
 N 3480 140 3480 170 {
-lab=Idump}
+lab=GND}
 N 3480 140 3510 140 {
-lab=Idump}
+lab=GND}
 N 3940 170 3980 170 {
 lab=#net7}
 N 4010 140 4040 140 {
-lab=Idump}
+lab=GND}
 N 4040 140 4040 170 {
-lab=Idump}
+lab=GND}
 N 3480 310 3480 340 {
-lab=Idump}
+lab=GND}
 N 3480 310 3510 310 {
-lab=Idump}
+lab=GND}
 N 3540 340 3580 340 {
 lab=Iout}
 N 3940 340 3980 340 {
 lab=Iout}
 N 4010 310 4040 310 {
-lab=Idump}
+lab=GND}
 N 4040 310 4040 340 {
-lab=Idump}
+lab=GND}
 N 4010 140 4010 310 {
-lab=Idump}
+lab=GND}
 N 3510 140 3510 310 {
-lab=Idump}
+lab=GND}
 N 3940 80 3940 170 {
 lab=#net7}
 N 3860 100 3860 170 {
@@ -392,9 +392,9 @@ lab=Vg}
 N 3710 120 3710 140 {
 lab=Vg}
 N 3480 440 4040 440 {
-lab=Idump}
+lab=GND}
 N 3760 340 3760 440 {
-lab=Idump}
+lab=GND}
 N 3610 260 3610 310 {
 lab=D3}
 N 3610 260 3910 260 {
@@ -414,7 +414,7 @@ lab=D3b}
 N 3350 120 3610 120 {
 lab=Vg}
 N 3480 340 3480 440 {
-lab=Idump}
+lab=GND}
 N 3380 100 3660 100 {
 lab=#net5}
 N 2820 100 3100 100 {
@@ -432,7 +432,7 @@ lab=#net7}
 N 4400 340 4440 340 {
 lab=#net10}
 N 4300 340 4340 340 {
-lab=Idump}
+lab=GND}
 N 4200 340 4240 340 {
 lab=#net10}
 N 4220 290 4220 340 {
@@ -452,33 +452,33 @@ lab=Iout}
 N 4100 170 4140 170 {
 lab=#net9}
 N 4040 140 4040 170 {
-lab=Idump}
+lab=GND}
 N 4040 140 4070 140 {
-lab=Idump}
+lab=GND}
 N 4500 170 4540 170 {
 lab=#net9}
 N 4570 140 4600 140 {
-lab=Idump}
+lab=GND}
 N 4600 140 4600 170 {
-lab=Idump}
+lab=GND}
 N 4040 310 4040 340 {
-lab=Idump}
+lab=GND}
 N 4040 310 4070 310 {
-lab=Idump}
+lab=GND}
 N 4100 340 4140 340 {
 lab=Iout}
 N 4500 340 4540 340 {
 lab=Iout}
 N 4570 310 4600 310 {
-lab=Idump}
+lab=GND}
 N 4600 310 4600 340 {
-lab=Idump}
+lab=GND}
 N 4040 340 4040 380 {
-lab=Idump}
+lab=GND}
 N 4570 140 4570 310 {
-lab=Idump}
+lab=GND}
 N 4070 140 4070 310 {
-lab=Idump}
+lab=GND}
 N 4500 80 4500 170 {
 lab=#net9}
 N 4420 100 4420 170 {
@@ -498,11 +498,11 @@ lab=Vg}
 N 4270 120 4270 140 {
 lab=Vg}
 N 4040 380 4040 440 {
-lab=Idump}
+lab=GND}
 N 4040 440 4600 440 {
-lab=Idump}
+lab=GND}
 N 4320 340 4320 440 {
-lab=Idump}
+lab=GND}
 N 4170 260 4170 310 {
 lab=D4}
 N 4170 260 4470 260 {
@@ -532,7 +532,7 @@ lab=#net9}
 N 4960 340 5000 340 {
 lab=#net12}
 N 4860 340 4900 340 {
-lab=Idump}
+lab=GND}
 N 4760 340 4800 340 {
 lab=#net12}
 N 4780 290 4780 340 {
@@ -552,31 +552,29 @@ lab=Iout}
 N 4660 170 4700 170 {
 lab=#net11}
 N 4600 140 4600 170 {
-lab=Idump}
+lab=GND}
 N 4600 140 4630 140 {
-lab=Idump}
+lab=GND}
 N 5060 170 5100 170 {
 lab=#net11}
 N 5130 140 5160 140 {
-lab=Idump}
-N 5160 140 5160 170 {
-lab=Idump}
+lab=GND}
 N 4600 310 4600 340 {
-lab=Idump}
+lab=GND}
 N 4600 310 4630 310 {
-lab=Idump}
+lab=GND}
 N 4660 340 4700 340 {
 lab=Iout}
 N 5060 340 5100 340 {
 lab=Iout}
 N 5130 310 5160 310 {
-lab=Idump}
+lab=GND}
 N 5160 310 5160 340 {
-lab=Idump}
+lab=GND}
 N 5130 140 5130 310 {
-lab=Idump}
+lab=GND}
 N 4630 140 4630 310 {
-lab=Idump}
+lab=GND}
 N 5060 80 5060 170 {
 lab=#net11}
 N 4980 100 4980 170 {
@@ -596,9 +594,9 @@ lab=Vg}
 N 4830 120 4830 140 {
 lab=Vg}
 N 4600 440 5160 440 {
-lab=Idump}
+lab=GND}
 N 4880 340 4880 440 {
-lab=Idump}
+lab=GND}
 N 4730 260 4730 310 {
 lab=D5}
 N 4730 260 5030 260 {
@@ -618,69 +616,65 @@ lab=D5b}
 N 4470 120 4730 120 {
 lab=Vg}
 N 4600 340 4600 440 {
-lab=Idump}
+lab=GND}
 N 4500 100 4780 100 {
 lab=#net9}
-N 5260 80 5620 80 {
+N 5360 80 5720 80 {
 lab=#net13}
+N 5620 170 5660 170 {
+lab=#net11}
 N 5520 170 5560 170 {
-lab=#net11}
-N 5420 170 5460 170 {
 lab=#net14}
-N 5320 170 5360 170 {
+N 5420 170 5460 170 {
 lab=#net11}
-N 5340 100 5540 100 {
+N 5440 100 5640 100 {
 lab=#net11}
 N 5520 340 5560 340 {
-lab=#net14}
+lab=#net11}
 N 5420 340 5460 340 {
-lab=Idump}
+lab=GND}
 N 5320 340 5360 340 {
-lab=#net14}
+lab=#net11}
 N 5340 290 5340 340 {
-lab=#net14}
+lab=#net11}
 N 5340 290 5540 290 {
-lab=#net14}
+lab=#net11}
 N 5540 290 5540 340 {
-lab=#net14}
-N 5440 170 5440 290 {
-lab=#net14}
+lab=#net11}
 N 5260 340 5260 420 {
 lab=Iout}
 N 5260 420 5620 420 {
 lab=Iout}
 N 5620 340 5620 420 {
 lab=Iout}
-N 5220 170 5260 170 {
+N 5320 170 5360 170 {
 lab=#net13}
-N 5160 140 5160 170 {
-lab=Idump}
 N 5160 310 5160 340 {
-lab=Idump}
+lab=GND}
 N 5220 340 5260 340 {
 lab=Iout}
-N 5620 80 5620 170 {
+N 5720 80 5720 170 {
 lab=#net13}
-N 5540 100 5540 170 {
+N 5640 100 5640 170 {
 lab=#net11}
-N 5340 100 5340 170 {
+N 5440 100 5440 170 {
 lab=#net11}
-N 5260 80 5260 170 {
+N 5360 80 5360 170 {
 lab=#net13}
-N 5290 120 5290 140 {
+N 5390 120 5390 140 {
 lab=Vg}
-N 5290 120 5590 120 {
+N 5390 120 5690 120 {
+lab=Vg}
+N 5690 120 5690 140 {
 lab=Vg}
 N 5590 120 5590 140 {
 lab=Vg}
 N 5490 120 5490 140 {
 lab=Vg}
-N 5390 120 5390 140 {
-lab=Vg}
 N 5160 380 5160 440 {
-lab=Idump}
+lab=GND}
 N 5440 340 5440 440 {
-lab=Idump}
+lab=GND}
 N 5290 260 5290 310 {
 lab=D6}
 N 5290 260 5590 260 {
@@ -697,10 +691,10 @@ N 5290 310 5290 480 {
 lab=D6}
 N 5390 400 5390 480 {
 lab=D6b}
-N 5060 100 5340 100 {
+N 5060 100 5440 100 {
 lab=#net11}
 N 5160 440 5440 440 {
-lab=Idump}
+lab=GND}
 N 3940 100 4220 100 {
 lab=#net7}
 N 2260 420 2460 420 {
@@ -715,60 +709,64 @@ N 4500 420 4700 420 {
 lab=Iout}
 N 5060 420 5260 420 {
 lab=Iout}
-N 5160 140 5160 170 {
-lab=Idump}
 N 5160 310 5160 340 {
-lab=Idump}
-N 5160 140 5160 170 {
-lab=Idump}
+lab=GND}
 N 5160 310 5160 340 {
-lab=Idump}
+lab=GND}
 N 5160 340 5160 380 {
-lab=Idump}
-N 5790 140 5820 140 {
-lab=Idump}
-N 5790 310 5820 310 {
-lab=Idump}
-N 5790 140 5790 310 {
-lab=Idump}
-N 5820 140 5820 170 {
-lab=Idump}
-N 5820 310 5820 340 {
-lab=Idump}
+lab=GND}
+N 5890 140 5920 140 {
+lab=GND}
+N 5890 310 5920 310 {
+lab=GND}
+N 5890 140 5890 310 {
+lab=GND}
+N 5920 140 5920 170 {
+lab=GND}
+N 5920 310 5920 340 {
+lab=GND}
 N 5440 440 5680 440 {
-lab=Idump}
-N 5820 170 5820 310 {
-lab=Idump}
-N 5190 120 5190 140 {
+lab=GND}
+N 5920 170 5920 310 {
+lab=GND}
+N 5290 120 5290 140 {
 lab=Vg}
-N 5190 120 5290 120 {
+N 5290 120 5390 120 {
 lab=Vg}
 N 5160 310 5190 310 {
-lab=Idump}
-N 5620 170 5660 170 {
-lab=#net13}
-N 5690 120 5690 140 {
-lab=Vg}
-N 5590 120 5690 120 {
-lab=Vg}
+lab=GND}
 N 5720 170 5760 170 {
-lab=Idump}
-N 5740 140 5790 140 {
-lab=Idump}
-N 5740 140 5740 170 {
-lab=Idump}
-N 5680 440 5820 440 {
-lab=Idump}
-N 5820 340 5820 440 {
-lab=Idump}
-N 5620 340 5760 340 {
+lab=#net13}
+N 5790 120 5790 140 {
+lab=Vg}
+N 5690 120 5790 120 {
+lab=Vg}
+N 5820 170 5860 170 {
+lab=GND}
+N 5840 140 5890 140 {
+lab=GND}
+N 5840 140 5840 170 {
+lab=GND}
+N 5680 440 5920 440 {
+lab=GND}
+N 5920 340 5920 440 {
+lab=GND}
+N 5620 340 5860 340 {
 lab=Iout}
-N 5030 120 5190 120 {
+N 5030 120 5290 120 {
 lab=Vg}
 N 3910 120 4170 120 {
 lab=Vg}
 N 2790 120 3050 120 {
 lab=Vg}
+N 5160 140 5160 170 {
+lab=GND}
+N 5220 170 5260 170 {
+lab=#net15}
+N 5160 140 5190 140 {
+lab=GND}
+N 5540 170 5540 260 {}
+N 5240 170 5240 440 {}
 C {madvlsi/nmos3.sym} 1930 170 3 1 {name=MH1
 L=0.5
 W=6
@@ -953,7 +951,7 @@ C {devices/ipin.sym} 1930 480 3 0 {name=p1 lab=D0
 W=6}
 C {devices/ipin.sym} 2030 480 3 0 {name=p2 lab=D0b
 W=6}
-C {devices/opin.sym} 1760 440 2 0 {name=p21 lab=Idump
+C {devices/opin.sym} 1760 440 2 0 {name=p21 lab=GND
 W=6}
 C {devices/opin.sym} 1760 420 2 0 {name=p22 lab=Iout
 W=6}
@@ -1881,7 +1879,7 @@ C {devices/ipin.sym} 4730 480 3 0 {name=p33 lab=D5
 W=6}
 C {devices/ipin.sym} 4830 480 3 0 {name=p34 lab=D5b
 W=6}
-C {madvlsi/nmos3.sym} 5290 170 3 1 {name=MH78
+C {madvlsi/nmos3.sym} 5390 170 3 1 {name=MH78
 L=0.5
 W=6
 body=GND
@@ -1896,7 +1894,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 5390 170 3 1 {name=MV79
+C {madvlsi/nmos3.sym} 5490 170 3 1 {name=MV79
 L=0.5
 W=6
 body=GND
@@ -1911,7 +1909,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 5490 170 3 1 {name=MV80
+C {madvlsi/nmos3.sym} 5590 170 3 1 {name=MV80
 L=0.5
 W=6
 body=GND
@@ -1926,7 +1924,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 5590 170 3 1 {name=MH81
+C {madvlsi/nmos3.sym} 5690 170 3 1 {name=MH81
 L=0.5
 W=6
 body=GND
@@ -2005,7 +2003,7 @@ C {devices/ipin.sym} 5290 480 3 0 {name=p35 lab=D6
 W=6}
 C {devices/ipin.sym} 5390 480 3 0 {name=p36 lab=D6b
 W=6}
-C {madvlsi/nmos3.sym} 5190 170 3 1 {name=M1
+C {madvlsi/nmos3.sym} 5290 170 3 1 {name=M1
 L=0.5
 W=6
 body=GND
@@ -2035,7 +2033,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 5790 340 3 1 {name=M4
+C {madvlsi/nmos3.sym} 5890 340 3 1 {name=M4
 L=0.5
 W=6
 body=GND
@@ -2050,7 +2048,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 5790 170 3 1 {name=M5
+C {madvlsi/nmos3.sym} 5890 170 3 1 {name=M5
 L=0.5
 W=6
 body=GND
@@ -2065,7 +2063,22 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 5690 170 3 1 {name=M6
+C {madvlsi/nmos3.sym} 5790 170 3 1 {name=M6
+L=0.5
+W=6
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {madvlsi/nmos3.sym} 5190 170 3 1 {name=M3
 L=0.5
 W=6
 body=GND
