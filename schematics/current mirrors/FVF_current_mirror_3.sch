@@ -164,7 +164,7 @@ value=".option wnflag=1
 .param MC_SWITCH=0.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {devices/code_shown.sym} 520 190 0 0 {name=SPICE only_toplevel=false value=".dc Viout4 0 1.8 0.01
+C {devices/code_shown.sym} 520 190 0 0 {name=SPICE only_toplevel=false value=".dc Viout4 0 1.8 0.01 
 .save all"}
 C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias.sym} -250 -150 0 0 {name=x1}
 C {madvlsi/gnd.sym} -250 -90 0 0 {name=l8 lab=GND}
