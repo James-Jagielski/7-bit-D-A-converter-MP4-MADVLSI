@@ -9,12 +9,42 @@ N 200 -240 235 -240 {
 lab=#net1}
 N 235 -240 235 -230 {
 lab=#net1}
-N 160 -455 160 -440 {
-lab=#net2}
 N 160 -430 160 -400 {
+lab=#net2}
+N -250 -770 -230 -770 {
 lab=#net3}
+N 30 -540 50 -540 {
+lab=#net4}
+N 40 -570 40 -540 {
+lab=#net4}
+N -30 -570 40 -570 {
+lab=#net4}
+N -80 -520 -80 -510 {
+lab=GND}
+N -80 -510 80 -510 {
+lab=GND}
+N 110 -600 130 -600 {
+lab=#net5}
+N 80 -570 120 -570 {
+lab=#net5}
+N 120 -600 120 -570 {
+lab=#net5}
+N 80 -630 160 -630 {
+lab=VDD}
+N -80 -630 80 -630 {
+lab=VDD}
+N -80 -630 -80 -620 {
+lab=VDD}
+N 160 -570 160 -520 {
+lab=#net6}
+N 50 -490 50 -470 {
+lab=#net7}
+N 50 -490 130 -490 {
+lab=#net7}
+N 160 -460 160 -440 {
+lab=#net8}
 C {madvlsi/vdd.sym} 140 -400 0 0 {name=l1 lab=VDD}
-C {madvlsi/vdd.sym} 160 -515 0 0 {name=l2 lab=VDD}
+C {madvlsi/vdd.sym} -300 -820 0 0 {name=l2 lab=VDD}
 C {madvlsi/gnd.sym} 140 -200 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 80 -340 0 0 {name=p3 sig_type=std_logic lab=V1}
 C {devices/lab_pin.sym} 80 -320 0 0 {name=p4 sig_type=std_logic lab=V2}
@@ -75,7 +105,7 @@ let Ibias = 30n
 dowhile Ibias < Ibias_max
 alter Ib $&Ibias
 
-let mc_runs = 10
+let mc_runs = 1
 let run = 1
 dowhile run <= mc_runs
 
@@ -127,7 +157,7 @@ dowhile run <= mc_runs
     save all
     op
     
-    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/bias_current_test_results_2/ieeeDAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Vib) i(Viout)
+    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/dac_with_external_bias_gen/test_4/ieeeDAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Vib) i(Viout)
     if code eq 0
       set appendwrite
       set wr_vecnames = FALSE
@@ -147,6 +177,181 @@ end
 quit
 .endc"}
 C {madvlsi/ammeter2.sym} 160 -440 0 0 {name=Vib}
-C {madvlsi/isource.sym} 160 -485 0 0 {name=I1
-value=30n}
 C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/ieee_simple_M_2M_DAC.sym} 140 -330 0 0 {name=x1}
+C {madvlsi/gnd.sym} -300 -720 0 0 {name=l13 lab=GND}
+C {madvlsi/pmos3.sym} -200 -770 0 0 {name=M1
+L=0.5
+W=3
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/vdd.sym} -200 -800 0 0 {name=l15 lab=VDD}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias_2/current_bias.sym} -300 -770 0 0 {name=x2}
+C {madvlsi/isource.sym} 270 -620 0 0 {name=I1
+value=30n}
+C {madvlsi/vdd.sym} 270 -650 0 0 {name=l16 lab=VDD}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias.sym} -80 -570 0 0 {name=x3}
+C {madvlsi/gnd.sym} -80 -510 0 0 {name=l17 lab=GND}
+C {madvlsi/nmos3.sym} 0 -540 0 1 {name=M3
+L=0.5
+W=12
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {madvlsi/nmos3.sym} 80 -540 0 0 {name=M4
+L=0.5
+W=12
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {madvlsi/pmos3.sym} 80 -600 0 1 {name=M7
+L=0.5
+W=12
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/pmos3.sym} 160 -600 0 0 {name=M8
+L=0.5
+W=12
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/vdd.sym} 20 -630 0 0 {name=l18 lab=VDD}
+C {madvlsi/pmos3.sym} 160 -490 0 0 {name=M2
+L=0.5
+W=12
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/vsource.sym} 50 -440 0 0 {name=V7
+value=1}
+C {madvlsi/gnd.sym} 50 -410 0 0 {name=l19 lab=GND}
+C {madvlsi/pmos3.sym} -360 -500 0 0 {name=M5
+L=0.5
+W=12
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/pmos3.sym} -360 -410 0 0 {name=M6
+L=0.5
+W=12
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/pmos3.sym} -230 -460 2 0 {name=M9
+L=0.5
+W=12
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/nmos3.sym} -360 -310 2 0 {name=M10
+L=0.15
+W=1
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {madvlsi/nmos3.sym} -230 -310 0 0 {name=M11
+L=0.15
+W=1
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}

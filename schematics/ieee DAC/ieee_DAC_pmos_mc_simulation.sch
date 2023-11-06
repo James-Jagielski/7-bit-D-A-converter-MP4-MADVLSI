@@ -5,14 +5,36 @@ K {}
 V {}
 S {}
 E {}
-N 200 -240 235 -240 {
-lab=#net1}
-N 235 -240 235 -230 {
-lab=#net1}
-N 160 -455 160 -440 {
-lab=#net2}
 N 160 -430 160 -400 {
+lab=#net1}
+N -420 -810 -370 -810 {
+lab=#net2}
+N -340 -860 -340 -840 {
 lab=#net3}
+N -340 -860 -260 -860 {
+lab=#net3}
+N -260 -860 -260 -750 {
+lab=#net3}
+N 160 -460 160 -440 {
+lab=#net4}
+N 200 -240 260 -240 {
+lab=#net5}
+N 0 -490 20 -490 {
+lab=#net6}
+N 10 -520 10 -490 {
+lab=#net6}
+N -60 -520 10 -520 {
+lab=#net6}
+N -110 -470 -110 -460 {
+lab=GND}
+N -110 -460 50 -460 {
+lab=GND}
+N 50 -550 50 -520 {
+lab=#net4}
+N 50 -550 160 -550 {
+lab=#net4}
+N 160 -550 160 -460 {
+lab=#net4}
 C {madvlsi/vdd.sym} 140 -400 0 0 {name=l1 lab=VDD}
 C {madvlsi/gnd.sym} 140 -200 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 80 -340 0 0 {name=p3 sig_type=std_logic lab=V1}
@@ -61,9 +83,8 @@ value=".option wnflag=1
 .param MC_SWITCH=1.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {madvlsi/vsource.sym} 235 -200 0 0 {name=Viout
+C {madvlsi/vsource.sym} 260 -270 0 0 {name=Viout
 value=0}
-C {madvlsi/gnd.sym} 235 -170 0 0 {name=l14 lab=GND}
 C {devices/code.sym} 545 -505 0 0 {name="CONTROL CODE" only_toplevel=false value="
 .control
 set wr_vecnames
@@ -74,7 +95,7 @@ let Ibias = 30n
 dowhile Ibias < Ibias_max
 alter Ib $&Ibias
 
-let mc_runs = 10
+let mc_runs = 1
 let run = 1
 dowhile run <= mc_runs
 
@@ -126,7 +147,7 @@ dowhile run <= mc_runs
     save all
     op
     
-    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/pmos_bias_current_test_results_1/ieeeDAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Vib) i(Viout)
+    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/dac_with_external_bias_gen/pmos_4/ieeeDAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Vib) i(Viout)
     if code eq 0
       set appendwrite
       set wr_vecnames = FALSE
@@ -146,7 +167,60 @@ end
 quit
 .endc"}
 C {madvlsi/ammeter2.sym} 160 -440 0 0 {name=Vib}
-C {madvlsi/isource.sym} 160 -485 2 0 {name=I1
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/ieee_simple_M_2M_DAC_pmos.sym} 140 -330 0 0 {name=x1}
+C {madvlsi/nmos3.sym} -340 -810 0 0 {name=M1
+L=0.5
+W=3
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {madvlsi/gnd.sym} -340 -780 0 0 {name=l13 lab=GND}
+C {madvlsi/vdd.sym} -470 -860 0 0 {name=l15 lab=VDD}
+C {madvlsi/gnd.sym} -470 -760 0 0 {name=l16 lab=GND}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias_3/current_bias.sym} -470 -810 0 0 {name=x2}
+C {madvlsi/isource.sym} 210 -570 2 0 {name=I2
 value=100n}
-C {madvlsi/gnd.sym} 160 -515 2 0 {name=l2 lab=GND}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee_simple_M_2M_DAC_pmos.sym} 140 -330 0 0 {name=x1}
+C {madvlsi/gnd.sym} 210 -600 2 0 {name=l17 lab=GND}
+C {madvlsi/vdd.sym} 260 -300 0 0 {name=l2 lab=VDD}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias.sym} -110 -520 0 0 {name=x3}
+C {madvlsi/gnd.sym} -110 -460 0 0 {name=l14 lab=GND}
+C {madvlsi/nmos3.sym} -30 -490 0 1 {name=M3
+L=0.5
+W=12
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {madvlsi/nmos3.sym} 50 -490 0 0 {name=M4
+L=0.5
+W=12
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {madvlsi/vdd.sym} -110 -570 0 0 {name=l18 lab=VDD}
