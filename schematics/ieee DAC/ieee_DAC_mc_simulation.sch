@@ -146,7 +146,7 @@ end
 
 quit
 .endc"}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee_simple_M_2M_DAC.sym} 140 -330 0 0 {name=x1}
 C {madvlsi/ammeter2.sym} 160 -440 0 0 {name=Vib}
 C {madvlsi/isource.sym} 160 -485 0 0 {name=I1
 value=30n}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/ieee_simple_M_2M_DAC.sym} 140 -330 0 0 {name=x1}

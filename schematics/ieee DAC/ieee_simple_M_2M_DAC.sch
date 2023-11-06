@@ -73,8 +73,10 @@ N 260 130 380 130 {
 lab=#net6}
 N 180 -40 260 -40 {
 lab=D1}
-N 370 -150 450 -150 {}
-N 450 -150 450 -120 {}
+N 370 -150 450 -150 {
+lab=#net8}
+N 450 -150 450 -120 {
+lab=#net8}
 C {devices/ipin.sym} 480 -120 1 0 {name=p3 lab=Ibias}
 C {devices/opin.sym} 550 150 0 0 {name=p4 lab=Iout}
 C {devices/ipin.sym} 300 -70 0 0 {name=p5 lab=D0}
@@ -102,16 +104,16 @@ C {devices/lab_pin.sym} 330 30 0 0 {name=p26 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 210 -10 0 0 {name=p27 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 120 -70 2 0 {name=p28 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 120 -100 2 0 {name=p29 sig_type=std_logic lab=VDD}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/inverter.sym} 330 -70 0 0 {name=x2}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/inverter.sym} 210 -30 0 0 {name=x3}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/inverter.sym} 330 10 0 0 {name=x4}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/inverter.sym} 210 50 0 0 {name=x5}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/inverter.sym} 330 90 0 0 {name=x6}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/inverter.sym} 210 130 0 0 {name=x7}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/inverter.sym} 330 170 0 0 {name=x8}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee_DAC.sym} 530 60 0 0 {name=x9}
 C {devices/lab_pin.sym} 550 170 2 0 {name=p2 sig_type=std_logic lab=GND}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/inverter.sym} 330 -150 0 0 {name=x1}
 C {devices/lab_pin.sym} 330 -170 0 0 {name=p31 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 330 -130 0 0 {name=p30 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 300 -150 0 0 {name=p32 sig_type=std_logic lab=GND}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/inverter.sym} 330 -150 0 0 {name=x1}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/inverter.sym} 330 -70 0 0 {name=x2}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/inverter.sym} 210 -30 0 0 {name=x3}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/inverter.sym} 330 10 0 0 {name=x4}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/inverter.sym} 210 50 0 0 {name=x5}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/inverter.sym} 330 90 0 0 {name=x6}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/inverter.sym} 210 130 0 0 {name=x7}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/inverter.sym} 330 170 0 0 {name=x8}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/ieee_DAC.sym} 530 60 0 0 {name=x9}
