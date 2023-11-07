@@ -86,8 +86,8 @@ C {devices/ipin.sym} 180 50 0 0 {name=p8 lab=D3}
 C {devices/ipin.sym} 300 90 0 0 {name=p9 lab=D4}
 C {devices/ipin.sym} 180 130 0 0 {name=p10 lab=D5}
 C {devices/ipin.sym} 300 170 0 0 {name=p11 lab=D6}
-C {devices/iopin.sym} 120 -100 2 0 {name=p15 lab=VDD}
-C {devices/iopin.sym} 120 -70 2 0 {name=p16 lab=GND}
+C {devices/iopin.sym} -120 -100 2 0 {name=p15 lab=VDD}
+C {devices/iopin.sym} -120 -70 2 0 {name=p16 lab=GND}
 C {devices/lab_pin.sym} 330 -90 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 210 -50 2 0 {name=p13 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 330 -10 0 0 {name=p14 sig_type=std_logic lab=VDD}
@@ -102,8 +102,8 @@ C {devices/lab_pin.sym} 210 70 0 0 {name=p24 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 330 -50 0 0 {name=p25 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 330 30 0 0 {name=p26 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 210 -10 0 0 {name=p27 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} 120 -70 2 0 {name=p28 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} 120 -100 2 0 {name=p29 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} -120 -70 2 0 {name=p28 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} -120 -100 2 0 {name=p29 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 550 170 2 0 {name=p2 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 330 -170 0 0 {name=p31 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 330 -130 0 0 {name=p30 sig_type=std_logic lab=GND}

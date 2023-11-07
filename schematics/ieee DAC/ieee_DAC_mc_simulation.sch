@@ -11,40 +11,67 @@ N 235 -240 235 -230 {
 lab=#net1}
 N 160 -430 160 -400 {
 lab=#net2}
-N -250 -770 -230 -770 {
+N 110 -490 130 -490 {
 lab=#net3}
-N 30 -540 50 -540 {
+N 540 -880 560 -880 {
 lab=#net4}
-N 40 -570 40 -540 {
+N 550 -910 550 -880 {
 lab=#net4}
-N -30 -570 40 -570 {
+N 480 -910 550 -910 {
 lab=#net4}
-N -80 -520 -80 -510 {
+N 430 -860 430 -850 {
 lab=GND}
-N -80 -510 80 -510 {
+N 430 -850 590 -850 {
 lab=GND}
-N 110 -600 130 -600 {
+N 620 -940 640 -940 {
 lab=#net5}
-N 80 -570 120 -570 {
+N 590 -910 630 -910 {
 lab=#net5}
-N 120 -600 120 -570 {
+N 630 -940 630 -910 {
 lab=#net5}
-N 80 -630 160 -630 {
+N 590 -970 670 -970 {
 lab=VDD}
-N -80 -630 80 -630 {
+N 430 -970 590 -970 {
 lab=VDD}
-N -80 -630 -80 -620 {
+N 430 -970 430 -960 {
 lab=VDD}
-N 160 -570 160 -520 {
+N 670 -910 670 -860 {
 lab=#net6}
-N 50 -490 50 -470 {
+N 560 -830 560 -810 {
 lab=#net7}
-N 50 -490 130 -490 {
+N 560 -830 640 -830 {
 lab=#net7}
 N 160 -460 160 -440 {
+lab=Vb}
+N -360 -470 -360 -440 {
 lab=#net8}
-C {madvlsi/vdd.sym} 140 -400 0 0 {name=l1 lab=VDD}
-C {madvlsi/vdd.sym} -300 -820 0 0 {name=l2 lab=VDD}
+N -360 -380 -360 -340 {
+lab=#net9}
+N -330 -310 -260 -310 {
+lab=#net10}
+N -230 -380 -230 -340 {
+lab=#net11}
+N -360 -460 -230 -460 {
+lab=#net8}
+N -230 -460 -230 -440 {
+lab=#net8}
+N -410 -410 -390 -410 {
+lab=#net9}
+N -410 -500 -410 -410 {
+lab=#net9}
+N -410 -500 -390 -500 {
+lab=#net9}
+N -410 -360 -360 -360 {
+lab=#net9}
+N -410 -410 -410 -360 {
+lab=#net9}
+N -200 -410 -180 -410 {
+lab=#net11}
+N -180 -410 -180 -360 {
+lab=#net11}
+N -230 -360 -180 -360 {
+lab=#net11}
+C {madvlsi/vdd.sym} 60 -540 0 0 {name=l2 lab=VDD}
 C {madvlsi/gnd.sym} 140 -200 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 80 -340 0 0 {name=p3 sig_type=std_logic lab=V1}
 C {devices/lab_pin.sym} 80 -320 0 0 {name=p4 sig_type=std_logic lab=V2}
@@ -89,7 +116,7 @@ C {madvlsi/tt_models.sym} 405 -505 0 0 {
 name=TT_MODELS
 only_toplevel=false
 value=".option wnflag=1
-.param MC_SWITCH=1.0
+.param MC_SWITCH=0.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
 C {madvlsi/vsource.sym} 235 -200 0 0 {name=Viout
@@ -114,37 +141,37 @@ dowhile run <= mc_runs
     if floor(code / 1) eq 0
       let b0 = 0
     else
-      let b0 = (floor(code / 1) % 2) * 1.8
+      let b0 = (floor(code / 1) % 2) * 0.55
     end
     if floor(code / 2) eq 0
       let b1 = 0
     else
-      let b1 = (floor(code / 2) % 2) * 1.8
+      let b1 = (floor(code / 2) % 2) * 0.55
     end
     if floor(code / 4) eq 0
       let b2 = 0
     else
-      let b2 = (floor(code / 4) % 2) * 1.8
+      let b2 = (floor(code / 4) % 2) * 0.55
     end
     if floor(code / 8) eq 0
       let b3 = 0
     else
-      let b3 = (floor(code / 8) % 2) * 1.8
+      let b3 = (floor(code / 8) % 2) * 0.55
     end
     if floor(code / 16) eq 0
       let b4 = 0
     else
-      let b4 = (floor(code / 16) % 2) * 1.8
+      let b4 = (floor(code / 16) % 2) * 0.55
     end
     if floor(code / 32) eq 0
       let b5 = 0
     else
-      let b5 = (floor(code / 32) % 2) * 1.8
+      let b5 = (floor(code / 32) % 2) * 0.55
     end
     if floor(code / 64) eq 0
       let b6 = 0
     else
-      let b6 = (floor(code / 64) % 2) * 1.8
+      let b6 = (floor(code / 64) % 2) * 0.55
     end
 
     alter V0 $&b0
@@ -157,7 +184,7 @@ dowhile run <= mc_runs
     save all
     op
     
-    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/dac_with_external_bias_gen/test_4/ieeeDAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Vib) i(Viout)
+    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/dac_with_external_bias_gen/test_13/ieeeDAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 v(Vb) i(Vib) i(Viout)
     if code eq 0
       set appendwrite
       set wr_vecnames = FALSE
@@ -178,10 +205,10 @@ quit
 .endc"}
 C {madvlsi/ammeter2.sym} 160 -440 0 0 {name=Vib}
 C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/ieee_simple_M_2M_DAC.sym} 140 -330 0 0 {name=x1}
-C {madvlsi/gnd.sym} -300 -720 0 0 {name=l13 lab=GND}
-C {madvlsi/pmos3.sym} -200 -770 0 0 {name=M1
+C {madvlsi/gnd.sym} 60 -440 0 0 {name=l13 lab=GND}
+C {madvlsi/pmos3.sym} 160 -490 0 0 {name=M1
 L=0.5
-W=3
+W=48
 body=VDD
 nf=1
 mult=1
@@ -194,14 +221,14 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/vdd.sym} -200 -800 0 0 {name=l15 lab=VDD}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias_2/current_bias.sym} -300 -770 0 0 {name=x2}
-C {madvlsi/isource.sym} 270 -620 0 0 {name=I1
+C {madvlsi/vdd.sym} 160 -520 0 0 {name=l15 lab=VDD}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias_2/current_bias.sym} 60 -490 0 0 {name=x2}
+C {madvlsi/isource.sym} -30 -580 0 0 {name=I1
 value=30n}
-C {madvlsi/vdd.sym} 270 -650 0 0 {name=l16 lab=VDD}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias.sym} -80 -570 0 0 {name=x3}
-C {madvlsi/gnd.sym} -80 -510 0 0 {name=l17 lab=GND}
-C {madvlsi/nmos3.sym} 0 -540 0 1 {name=M3
+C {madvlsi/vdd.sym} -30 -610 0 0 {name=l16 lab=VDD}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias.sym} 430 -910 0 0 {name=x3}
+C {madvlsi/gnd.sym} 430 -850 0 0 {name=l17 lab=GND}
+C {madvlsi/nmos3.sym} 510 -880 0 1 {name=M3
 L=0.5
 W=12
 body=GND
@@ -216,7 +243,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} 80 -540 0 0 {name=M4
+C {madvlsi/nmos3.sym} 590 -880 0 0 {name=M4
 L=0.5
 W=12
 body=GND
@@ -231,7 +258,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos3.sym} 80 -600 0 1 {name=M7
+C {madvlsi/pmos3.sym} 590 -940 0 1 {name=M7
 L=0.5
 W=12
 body=VDD
@@ -246,7 +273,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos3.sym} 160 -600 0 0 {name=M8
+C {madvlsi/pmos3.sym} 670 -940 0 0 {name=M8
 L=0.5
 W=12
 body=VDD
@@ -261,8 +288,8 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/vdd.sym} 20 -630 0 0 {name=l18 lab=VDD}
-C {madvlsi/pmos3.sym} 160 -490 0 0 {name=M2
+C {madvlsi/vdd.sym} 530 -970 0 0 {name=l18 lab=VDD}
+C {madvlsi/pmos3.sym} 670 -830 0 0 {name=M2
 L=0.5
 W=12
 body=VDD
@@ -277,9 +304,9 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/vsource.sym} 50 -440 0 0 {name=V7
+C {madvlsi/vsource.sym} 560 -780 0 0 {name=V7
 value=1}
-C {madvlsi/gnd.sym} 50 -410 0 0 {name=l19 lab=GND}
+C {madvlsi/gnd.sym} 560 -750 0 0 {name=l19 lab=GND}
 C {madvlsi/pmos3.sym} -360 -500 0 0 {name=M5
 L=0.5
 W=12
@@ -310,7 +337,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos3.sym} -230 -460 2 0 {name=M9
+C {madvlsi/pmos3.sym} -230 -410 2 0 {name=M9
 L=0.5
 W=12
 body=VDD
@@ -355,3 +382,12 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
+C {devices/lab_pin.sym} 160 -450 0 0 {name=p1 sig_type=std_logic lab=Vb}
+C {madvlsi/vdd.sym} -360 -530 0 0 {name=l20 lab=VDD}
+C {madvlsi/gnd.sym} -360 -280 0 0 {name=l21 lab=GND}
+C {madvlsi/gnd.sym} -230 -280 0 0 {name=l22 lab=GND}
+C {madvlsi/vsource.sym} 350 -450 0 0 {name=Vg
+value=0.55}
+C {madvlsi/gnd.sym} 350 -420 0 0 {name=l23 lab=GND}
+C {devices/lab_pin.sym} 350 -480 1 0 {name=p2 sig_type=std_logic lab=Vg}
+C {devices/lab_pin.sym} 140 -400 0 0 {name=p17 sig_type=std_logic lab=Vg}
