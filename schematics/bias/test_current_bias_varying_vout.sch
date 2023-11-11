@@ -36,9 +36,9 @@ value=".option wnflag=1
 }
 C {devices/code_shown.sym} 470 -20 0 0 {name=SPICE only_toplevel=false value=".save all
 .control
-  dc VDD 0 1.8 0.01
+  dc VDD 0 1.8 0.01 Vioutp 0 0.5 0.1
   run
-  plot i(Viout) i(Vioutp) i(Vioutn)
+  plot i(Vioutp)
 .endc"}
 C {madvlsi/vsource.sym} 260 -10 0 0 {name=Vioutn
 value=0}

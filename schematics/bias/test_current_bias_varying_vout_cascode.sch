@@ -6,17 +6,21 @@ V {}
 S {}
 E {}
 N 30 -70 230 -70 {
-lab=#net1}
-N 170 -80 170 -40 {
-lab=#net2}
+lab=Vbn}
 N 30 -110 140 -110 {
-lab=#net3}
+lab=Vbp}
 N 260 -140 260 -100 {
 lab=VDD}
 N 30 -90 80 -90 {
-lab=#net4}
+lab=#net1}
 N 80 -90 80 -40 {
-lab=#net4}
+lab=#net1}
+N 170 -80 170 70 {
+lab=#net2}
+N 70 100 70 110 {
+lab=#net3}
+N 70 100 140 100 {
+lab=#net3}
 C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias.sym} -20 -90 0 0 {name=x1}
 C {madvlsi/vsource.sym} 360 -100 0 0 {name=VDD
 value=1.8}
@@ -36,9 +40,10 @@ value=".option wnflag=1
 }
 C {devices/code_shown.sym} 470 -20 0 0 {name=SPICE only_toplevel=false value=".save all
 .control
-  dc VDD 0 1.8 0.01
+  dc VDD 0 1.8 0.01 Vioutp 0 0.5 0.1
   run
-  plot i(Viout) i(Vioutp) i(Vioutn)
+  plot i(Vioutp)
+  plot v(Vbp) v(Vbn)
 .endc"}
 C {madvlsi/vsource.sym} 260 -10 0 0 {name=Vioutn
 value=0}
@@ -73,8 +78,28 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/vsource.sym} 170 -10 0 0 {name=Vioutp
+C {madvlsi/vsource.sym} 170 160 0 0 {name=Vioutp
 value=0}
-C {madvlsi/gnd.sym} 170 20 0 0 {name=l7 lab=GND}
+C {madvlsi/gnd.sym} 170 190 0 0 {name=l7 lab=GND}
 C {madvlsi/vdd.sym} 170 -140 0 0 {name=l8 lab=VDD}
 C {madvlsi/vdd.sym} 260 -140 0 0 {name=l9 lab=VDD}
+C {madvlsi/pmos3.sym} 170 100 0 0 {name=M3
+L=0.5
+W=12
+body=VDD
+nf=1
+mult=8
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/vsource.sym} 70 140 0 0 {name=Vcp
+value=0.5}
+C {madvlsi/gnd.sym} 70 170 0 0 {name=l10 lab=GND}
+C {devices/lab_pin.sym} 100 -110 1 0 {name=p1 sig_type=std_logic lab=Vbp}
+C {devices/lab_pin.sym} 200 -70 3 0 {name=p2 sig_type=std_logic lab=Vbn}

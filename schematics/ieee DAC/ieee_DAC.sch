@@ -300,8 +300,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/ipin.sym} -110 30 0 0 {name=p3 lab=Ibias}
-C {devices/opin.sym} 1540 280 0 0 {name=p4 lab=Iout}
 C {devices/ipin.sym} -30 190 1 0 {name=p5 lab=D0}
 C {devices/ipin.sym} 170 190 1 0 {name=p6 lab=D1}
 C {devices/ipin.sym} 370 190 1 0 {name=p7 lab=D2}
@@ -309,7 +307,6 @@ C {devices/ipin.sym} 570 190 1 0 {name=p8 lab=D3}
 C {devices/ipin.sym} 770 190 1 0 {name=p9 lab=D4}
 C {devices/ipin.sym} 970 190 1 0 {name=p10 lab=D5}
 C {devices/ipin.sym} 1170 190 1 0 {name=p11 lab=D6}
-C {devices/ipin.sym} -110 60 0 0 {name=p12 lab=Vg}
 C {madvlsi/nmos3.sym} 1000 190 0 0 {name=M2
 L=0.5
 W=12
@@ -557,4 +554,7 @@ C {devices/ipin.sym} 720 190 1 0 {name=p16 lab=D3b}
 C {devices/ipin.sym} 920 190 1 0 {name=p17 lab=D4b}
 C {devices/ipin.sym} 1120 190 1 0 {name=p18 lab=D5b}
 C {devices/ipin.sym} 1320 190 1 0 {name=p19 lab=D6b}
-C {devices/opin.sym} 1540 320 0 0 {name=p20 lab=Idump}
+C {devices/iopin.sym} 1540 280 0 0 {name=p1 lab=Iout}
+C {devices/iopin.sym} 1540 320 0 0 {name=p2 lab=Idump}
+C {devices/iopin.sym} -110 30 2 0 {name=p21 lab=Ibias}
+C {devices/iopin.sym} -110 60 2 0 {name=p22 lab=Vg}

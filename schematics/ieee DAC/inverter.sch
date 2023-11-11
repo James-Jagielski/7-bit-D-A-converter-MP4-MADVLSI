@@ -6,10 +6,10 @@ V {}
 S {}
 E {}
 N 30 -30 30 30 {
-lab=xxx}
+lab=Y}
 C {madvlsi/nmos3.sym} 0 30 1 0 {name=M1
-L=0.15
-W=1
+L=0.5
+W=12
 body=GND
 nf=1
 mult=1
@@ -23,8 +23,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} 0 -30 3 0 {name=M2
-L=0.15
-W=1
+L=0.5
+W=12
 body=VDD
 nf=1
 mult=1

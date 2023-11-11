@@ -12,11 +12,11 @@ lab=#net1}
 N -190 10 -140 10 {
 lab=#net1}
 N 90 40 140 40 {
-lab=#net2}
+lab=Vbn}
 N 120 10 120 40 {
-lab=#net2}
+lab=Vbn}
 N 120 10 170 10 {
-lab=#net2}
+lab=Vbn}
 N -80 70 60 70 {
 lab=VN}
 N -190 130 -20 130 {
@@ -24,25 +24,25 @@ lab=VN}
 N -190 -80 -190 10 {
 lab=#net1}
 N -50 -110 30 -110 {
-lab=#net3}
-N -20 -110 -20 -80 {
-lab=#net3}
-N -80 -80 -20 -80 {
-lab=#net3}
-N -80 -80 -80 10 {
-lab=#net3}
-N 60 -80 60 10 {
-lab=#net4}
-N 170 -80 170 10 {
 lab=#net2}
+N -20 -110 -20 -80 {
+lab=#net2}
+N -80 -80 -20 -80 {
+lab=#net2}
+N -80 -80 -80 10 {
+lab=#net2}
+N 60 -80 60 10 {
+lab=Vbn}
+N 170 -80 170 10 {
+lab=Vbn}
 N 140 -110 140 -40 {
-lab=#net4}
+lab=Vbn}
 N 60 -40 140 -40 {
-lab=#net4}
+lab=Vbn}
 N -160 -40 60 -40 {
-lab=#net4}
+lab=Vbn}
 N -160 -110 -160 -40 {
-lab=#net4}
+lab=Vbn}
 N -190 -140 -80 -140 {
 lab=VP}
 N -80 -140 -20 -140 {
@@ -58,13 +58,13 @@ lab=VN}
 N -10 70 -10 130 {
 lab=VN}
 N 140 -110 240 -110 {
-lab=#net4}
+lab=Vbn}
 N 170 -140 270 -140 {
 lab=VP}
 N 140 40 240 40 {
-lab=#net2}
+lab=Vbn}
 N 270 -80 270 10 {
-lab=#net5}
+lab=#net3}
 C {madvlsi/nmos3.sym} -190 40 0 1 {name=M4
 L=0.5
 W=12
@@ -221,3 +221,5 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
+C {devices/opin.sym} 210 40 3 0 {name=p3 lab=Vbn}
+C {devices/opin.sym} 210 -110 1 0 {name=p5 lab=Vbp}
