@@ -21,8 +21,6 @@ N 70 100 70 110 {
 lab=#net3}
 N 70 100 140 100 {
 lab=#net3}
-N 270 -210 280 -220 {
-lab=#net4}
 C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias.sym} -20 -90 0 0 {name=x1}
 C {madvlsi/vsource.sym} 360 -100 0 0 {name=VDD
 value=1.8}

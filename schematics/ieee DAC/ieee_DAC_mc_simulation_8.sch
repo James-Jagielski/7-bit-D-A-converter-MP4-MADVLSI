@@ -176,7 +176,7 @@ lab=Vbp}
 N 40 -480 110 -480 {
 lab=Vcp}
 C {madvlsi/vsource.sym} 270 -560 0 0 {name=Vdd
-value=2.5}
+value=3.3}
 C {madvlsi/gnd.sym} 270 -530 0 0 {name=l4 lab=GND}
 C {madvlsi/vdd.sym} 270 -590 0 0 {name=l5 lab=VDD}
 C {madvlsi/gnd.sym} 145 325 0 0 {name=l6 lab=GND}
@@ -362,7 +362,7 @@ spiceprefix=X
 C {madvlsi/vdd.sym} 330 -450 0 0 {name=l22 lab=VDD}
 C {madvlsi/vdd.sym} 440 -450 0 0 {name=l23 lab=VDD}
 C {madvlsi/vsource.sym} 560 -230 0 0 {name=Viout
-value=0.7}
+value=1.5}
 C {madvlsi/gnd.sym} 560 -200 0 0 {name=l24 lab=GND}
 C {madvlsi/gnd.sym} 250 -80 0 0 {name=l14 lab=GND}
 C {madvlsi/gnd.sym} 220 170 0 0 {name=l21 lab=GND}
@@ -572,7 +572,7 @@ spiceprefix=X
 C {devices/lab_pin.sym} 400 -340 3 0 {name=p20 sig_type=std_logic lab=Vcp}
 C {devices/code_shown.sym} 560 -650 0 0 {name=s1 only_toplevel=false value=".save all
 .control
-  dc Vdd 0.5 3 0.05
+  dc Vdd 1 3 0.05
   run
   plot i(Viout)
   plot v(Vi1) v(Vi2)

@@ -70,7 +70,7 @@ L=0.5
 W=12
 body=GND
 nf=1
-mult=8
+mult=9
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -126,7 +126,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/resistor.sym} -190 100 0 0 {name=R1
-value=5k
+value=100k
 m=1}
 C {madvlsi/pmos3.sym} 60 -110 0 0 {name=M8
 L=0.5
