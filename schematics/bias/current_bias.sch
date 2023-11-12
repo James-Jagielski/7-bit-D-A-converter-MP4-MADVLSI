@@ -32,17 +32,17 @@ lab=#net2}
 N -80 -80 -80 10 {
 lab=#net2}
 N 60 -80 60 10 {
-lab=Vbn}
+lab=Vbp}
 N 170 -80 170 10 {
 lab=Vbn}
 N 140 -110 140 -40 {
-lab=Vbn}
+lab=Vbp}
 N 60 -40 140 -40 {
-lab=Vbn}
+lab=Vbp}
 N -160 -40 60 -40 {
-lab=Vbn}
+lab=Vbp}
 N -160 -110 -160 -40 {
-lab=Vbn}
+lab=Vbp}
 N -190 -140 -80 -140 {
 lab=VP}
 N -80 -140 -20 -140 {
@@ -58,7 +58,7 @@ lab=VN}
 N -10 70 -10 130 {
 lab=VN}
 N 140 -110 240 -110 {
-lab=Vbn}
+lab=Vbp}
 N 170 -140 270 -140 {
 lab=VP}
 N 140 40 240 40 {
@@ -126,7 +126,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/resistor.sym} -190 100 0 0 {name=R1
-value=100k
+value=5k
 m=1}
 C {madvlsi/pmos3.sym} 60 -110 0 0 {name=M8
 L=0.5
