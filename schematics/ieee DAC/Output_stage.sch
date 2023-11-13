@@ -47,8 +47,18 @@ N -130 -100 -130 120 {
 lab=GND}
 N -130 120 -20 120 {
 lab=GND}
+N -80 -130 -70 -130 {
+lab=Vcn}
+N -70 -130 -70 10 {
+lab=Vcn}
+N -70 10 -50 10 {
+lab=Vcn}
 C {madvlsi/nmos3.sym} -20 10 0 0 {name=M1
+<<<<<<< HEAD
 L=5
+=======
+L=6
+>>>>>>> dcdb639b91275e9b42d3410f2633a7a0120b21db
 W=12
 body=GND
 nf=1
@@ -63,7 +73,11 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} -20 90 0 1 {name=M2
+<<<<<<< HEAD
 L=5
+=======
+L=6
+>>>>>>> dcdb639b91275e9b42d3410f2633a7a0120b21db
 W=12
 body=GND
 nf=1
@@ -78,7 +92,11 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 120 10 0 0 {name=M3
+<<<<<<< HEAD
 L=5
+=======
+L=6
+>>>>>>> dcdb639b91275e9b42d3410f2633a7a0120b21db
 W=12
 body=GND
 nf=1
@@ -93,7 +111,11 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 120 90 0 1 {name=M4
+<<<<<<< HEAD
 L=5
+=======
+L=6
+>>>>>>> dcdb639b91275e9b42d3410f2633a7a0120b21db
 W=12
 body=GND
 nf=1
@@ -108,7 +130,11 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 250 10 0 0 {name=M5
+<<<<<<< HEAD
 L=5
+=======
+L=6
+>>>>>>> dcdb639b91275e9b42d3410f2633a7a0120b21db
 W=12
 body=GND
 nf=1
@@ -123,7 +149,11 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 250 90 0 0 {name=M6
+<<<<<<< HEAD
 L=5
+=======
+L=6
+>>>>>>> dcdb639b91275e9b42d3410f2633a7a0120b21db
 W=12
 body=GND
 nf=1
@@ -141,7 +171,11 @@ C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current
 L=0.5
 W=12}
 C {madvlsi/pmos3.sym} -20 -170 0 0 {name=M7
+<<<<<<< HEAD
 L=5
+=======
+L=6
+>>>>>>> dcdb639b91275e9b42d3410f2633a7a0120b21db
 W=12
 body=VDD
 nf=1
@@ -167,14 +201,18 @@ W=12}
 C {devices/ipin.sym} -60 50 0 0 {name=p4 lab=Idump
 L=0.5
 W=12}
-C {devices/ipin.sym} -50 10 0 0 {name=p5 lab=Vcn
+C {devices/ipin.sym} 320 -100 0 0 {name=p5 lab=Vcn
 L=0.5
 W=12}
 C {devices/iopin.sym} 300 -20 0 0 {name=p6 lab=Iout
 L=0.5
 W=12}
 C {madvlsi/pmos3.sym} 120 -170 0 0 {name=M8
+<<<<<<< HEAD
 L=5
+=======
+L=6
+>>>>>>> dcdb639b91275e9b42d3410f2633a7a0120b21db
 W=12
 body=VDD
 nf=1
@@ -189,7 +227,11 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} 250 -170 0 0 {name=M9
+<<<<<<< HEAD
 L=5
+=======
+L=6
+>>>>>>> dcdb639b91275e9b42d3410f2633a7a0120b21db
 W=12
 body=VDD
 nf=1
