@@ -1,8 +1,6 @@
 ** sch_path:
 *+ /home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias_layout_driven.sch
-**.subckt current_bias_layout_driven VN VP Vbn Vbp R
-*.iopin VN
-*.iopin VP
+**.subckt current_bias_layout_driven Vbn Vbp R
 *.opin Vbn
 *.opin Vbp
 *.iopin R
@@ -127,4 +125,6 @@ XMd8 Vbp Vp Vp VDD sky130_fd_pr__pfet_01v8 L=0.5 W=6 nf=1 ad='int((nf+1)/2) * W/
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
 **.ends
+.GLOBAL VDD
+.GLOBAL GND
 .end

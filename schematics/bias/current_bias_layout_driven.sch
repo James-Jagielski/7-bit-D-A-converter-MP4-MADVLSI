@@ -700,8 +700,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 80 -320 1 0 {name=p4 lab=VN}
-C {devices/iopin.sym} -80 -310 3 0 {name=p6 lab=VP}
 C {devices/opin.sym} -200 -280 3 0 {name=p7 lab=Vbn}
 C {devices/opin.sym} 200 -280 3 0 {name=p8 lab=Vbp}
 C {madvlsi/nmos3.sym} 350 200 1 1 {name=M1r
@@ -978,3 +976,5 @@ C {devices/lab_pin.sym} -100 -50 3 0 {name=p20 sig_type=std_logic lab=Vn}
 C {devices/lab_pin.sym} 100 -50 3 0 {name=p21 sig_type=std_logic lab=Vn}
 C {devices/lab_pin.sym} -100 90 1 0 {name=p22 sig_type=std_logic lab=Vn}
 C {devices/lab_pin.sym} 100 90 1 0 {name=p23 sig_type=std_logic lab=Vn}
+C {madvlsi/vdd.sym} -80 -310 0 0 {name=l1 lab=VDD}
+C {madvlsi/gnd.sym} 80 -320 0 0 {name=l2 lab=GND}
