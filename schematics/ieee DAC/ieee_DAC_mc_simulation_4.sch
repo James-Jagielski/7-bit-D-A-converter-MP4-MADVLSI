@@ -564,3 +564,9 @@ C {devices/code_shown.sym} 560 -650 0 0 {name=s1 only_toplevel=false value=".sav
 .endc"}
 C {devices/lab_pin.sym} 250 -250 1 0 {name=p21 sig_type=std_logic lab=Vdump}
 C {devices/lab_pin.sym} 220 -150 0 0 {name=p22 sig_type=std_logic lab=Vout}
+C {devices/code_shown.sym} 470 -20 0 0 {name=SPICE only_toplevel=false value=".save all
+.control
+  dc VDD 0 1.8 0.01
+  run
+  plot i(Vioutp) i(Vioutn)
+.endc"}
