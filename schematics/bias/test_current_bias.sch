@@ -13,10 +13,6 @@ N 30 -110 140 -110 {
 lab=#net3}
 N 260 -140 260 -100 {
 lab=VDD}
-N 30 -90 80 -90 {
-lab=#net4}
-N 80 -90 80 -40 {
-lab=#net4}
 C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias.sym} -20 -90 0 0 {name=x1}
 C {madvlsi/vsource.sym} 360 -100 0 0 {name=VDD
 value=1.8}
@@ -24,9 +20,6 @@ C {madvlsi/vdd.sym} 360 -130 0 0 {name=l1 lab=VDD}
 C {madvlsi/vdd.sym} -20 -140 0 0 {name=l2 lab=VDD}
 C {madvlsi/gnd.sym} 360 -70 0 0 {name=l3 lab=GND}
 C {madvlsi/gnd.sym} -20 -40 0 0 {name=l4 lab=GND}
-C {madvlsi/gnd.sym} 80 20 0 0 {name=l6 lab=GND}
-C {madvlsi/vsource.sym} 80 -10 0 0 {name=Viout
-value=0}
 C {madvlsi/tt_models.sym} 460 -180 0 0 {
 name=TT_MODELS
 only_toplevel=false
@@ -38,7 +31,7 @@ C {devices/code_shown.sym} 470 -20 0 0 {name=SPICE only_toplevel=false value=".s
 .control
   dc VDD 0 1.8 0.01
   run
-  plot i(Viout) i(Vioutp) i(Vioutn)
+  plot i(Vioutp) i(Vioutn)
 .endc"}
 C {madvlsi/vsource.sym} 260 -10 0 0 {name=Vioutn
 value=0}
