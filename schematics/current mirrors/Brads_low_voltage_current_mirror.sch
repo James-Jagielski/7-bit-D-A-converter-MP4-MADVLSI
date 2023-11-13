@@ -5,9 +5,9 @@ K {}
 V {}
 S {}
 E {}
-N -290 -280 -290 -270 {
+N -350 -280 -350 -270 {
 lab=GND}
-N -290 -390 -290 -380 {
+N -350 -390 -350 -380 {
 lab=VDD}
 N -320 -130 -180 -130 {
 lab=#net1}
@@ -49,14 +49,13 @@ N -180 -240 -180 -190 {
 lab=#net4}
 N -60 -240 -60 -190 {
 lab=#net5}
-N -60 -330 0 -330 {
-lab=#net5}
-N -60 -330 -60 -240 {
-lab=#net5}
-N -240 -330 -240 -220 {
+N -270 -320 -270 -220 {
 lab=#net2}
-C {madvlsi/gnd.sym} 0 -270 0 0 {name=l6 lab=GND}
-C {madvlsi/vsource.sym} 0 -300 0 0 {name=Viout
+N -30 -310 -30 -270 {
+lab=#net6}
+N -30 -310 140 -310 {
+lab=#net6}
+C {madvlsi/vsource.sym} -60 -330 0 0 {name=Viout
 value=0}
 C {madvlsi/vsource.sym} 200 -110 0 0 {name=VDD
 value=1.8}
@@ -71,9 +70,9 @@ value=".option wnflag=1
 }
 C {devices/code_shown.sym} 310 -30 0 0 {name=SPICE only_toplevel=false value=".dc Viout 0 1.8 0.01
 .save all"}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias.sym} -290 -330 0 0 {name=x4}
-C {madvlsi/gnd.sym} -290 -270 0 0 {name=l13 lab=GND}
-C {madvlsi/vdd.sym} -290 -390 0 0 {name=l2 lab=VDD}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias.sym} -350 -330 0 0 {name=x4}
+C {madvlsi/gnd.sym} -350 -270 0 0 {name=l13 lab=GND}
+C {madvlsi/vdd.sym} -350 -390 0 0 {name=l2 lab=VDD}
 C {madvlsi/nmos3.sym} -320 -160 0 0 {name=M3
 L=0.5
 W=12
@@ -168,4 +167,39 @@ spiceprefix=X
 }
 C {madvlsi/isource.sym} -180 -270 0 0 {name=Iin1
 value=30n}
-C {madvlsi/vdd.sym} -180 -300 0 0 {name=l11 lab=VDD}
+C {madvlsi/vdd.sym} -180 -300 0 0 {name=l4 lab=VDD}
+C {madvlsi/pmos3.sym} -270 -350 0 0 {name=M7
+L=0.5
+W=12
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/vdd.sym} -270 -380 0 0 {name=l7 lab=VDD}
+C {madvlsi/vdd.sym} -60 -360 0 0 {name=l9 lab=VDD}
+C {madvlsi/pmos3.sym} -60 -270 0 1 {name=M8
+L=0.5
+W=12
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/vsource.sym} 140 -280 0 0 {name=Viout1
+value=0.7}
+C {madvlsi/gnd.sym} 140 -250 0 0 {name=l6 lab=GND}
