@@ -15,54 +15,18 @@ N 200 -250 230 -250 {
 lab=#net2}
 N 230 -250 230 -230 {
 lab=#net2}
-N -320 -340 -220 -340 {
-lab=#net3}
-N -190 -310 -190 -270 {
-lab=Vcn}
-N -160 -240 -150 -240 {
-lab=Vcn}
-N -150 -280 -150 -240 {
-lab=Vcn}
-N -190 -280 -150 -280 {
-lab=Vcn}
-N -350 -310 -350 -270 {
-lab=#net4}
-N -350 -210 -350 -180 {
-lab=#net5}
-N -390 -280 -350 -280 {
-lab=#net4}
-N -390 -280 -390 -150 {
-lab=#net4}
-N -390 -150 -380 -150 {
-lab=#net4}
-N -390 -240 -380 -240 {
-lab=#net4}
-N -190 -210 -190 -200 {
-lab=#net5}
-N -350 -200 -190 -200 {
-lab=#net5}
 N 250 -270 330 -270 {
-lab=#net6}
+lab=#net3}
 N 250 -270 250 -240 {
-lab=#net6}
+lab=#net3}
 N 200 -240 250 -240 {
-lab=#net6}
+lab=#net3}
 N 230 -230 330 -230 {
 lab=#net2}
 N 490 -270 490 -250 {
-lab=#net7}
+lab=#net4}
 N 430 -270 490 -270 {
-lab=#net7}
-N -120 -340 -110 -340 {
-lab=#net3}
-N -220 -340 -120 -340 {
-lab=#net3}
-N -80 -310 -80 -290 {
-lab=#net3}
-N -120 -300 -80 -300 {
-lab=#net3}
-N -120 -340 -120 -300 {
-lab=#net3}
+lab=#net4}
 C {madvlsi/vdd.sym} 140 -400 0 0 {name=l1 lab=VDD}
 C {madvlsi/gnd.sym} 140 -200 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 80 -340 0 0 {name=p3 sig_type=std_logic lab=V1}
@@ -120,110 +84,84 @@ C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/Out
 C {madvlsi/gnd.sym} 380 -200 0 0 {name=l2 lab=GND}
 C {madvlsi/vdd.sym} 380 -300 0 0 {name=l13 lab=VDD}
 C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/ieee_simple_dac_differential_output.sym} 140 -330 0 0 {name=x3}
-C {madvlsi/pmos3.sym} -350 -340 0 1 {name=M20
-L=0.5
-W=0.75
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/pmos3.sym} -190 -340 2 1 {name=M21
-L=0.5
-W=12
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/nmos3.sym} -190 -240 0 1 {name=M22
-L=0.5
-W=12
-body=GND
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {madvlsi/nmos3.sym} -350 -240 2 1 {name=M23
-L=0.5
-W=12
-body=GND
-nf=1
-mult=12
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {madvlsi/nmos3.sym} -350 -150 2 1 {name=M24
-L=0.5
-W=12
-body=GND
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {madvlsi/vdd.sym} -350 -370 0 0 {name=l30 lab=VDD}
-C {madvlsi/vdd.sym} -190 -370 0 0 {name=l31 lab=VDD}
-C {madvlsi/gnd.sym} -350 -120 0 0 {name=l32 lab=GND}
-C {devices/lab_pin.sym} -150 -240 2 0 {name=p2 sig_type=std_logic lab=Vcn}
-C {madvlsi/isource.sym} -80 -260 0 0 {name=I2
-value=30n}
-C {madvlsi/vdd.sym} -80 -370 0 0 {name=l14 lab=VDD}
 C {madvlsi/vsource.sym} 490 -220 0 0 {name=Vout
 value=1.8}
 C {madvlsi/gnd.sym} 490 -190 0 0 {name=l15 lab=GND}
-C {madvlsi/pmos3.sym} -80 -340 2 1 {name=M1
-L=0.5
-W=12
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/gnd.sym} -80 -230 0 0 {name=l17 lab=GND}
-C {devices/code_shown.sym} 580 -490 0 0 {name=SPICE only_toplevel=false value=".save all
+C {devices/code.sym} 555 -505 0 0 {name="CONTROL CODE" only_toplevel=false value=".save all
 .control
-  dc Vout 0 1.8 0.01
-  run
-  plot i(Vout)
+set wr_vecnames
+set wr_singlescale
+
+let Ibias_max = 31n
+let Ibias = 30n
+dowhile Ibias < Ibias_max
+alter Ib $&Ibias
+
+let mc_runs = 10
+let run = 1
+dowhile run <= mc_runs
+
+  let code = 0
+  while code < 128
+    if floor(code / 1) eq 0
+      let b0 = 0
+    else
+      let b0 = (floor(code / 1) % 2) * 1.8
+    end
+    if floor(code / 2) eq 0
+      let b1 = 0
+    else
+      let b1 = (floor(code / 2) % 2) * 1.8
+    end
+    if floor(code / 4) eq 0
+      let b2 = 0
+    else
+      let b2 = (floor(code / 4) % 2) * 1.8
+    end
+    if floor(code / 8) eq 0
+      let b3 = 0
+    else
+      let b3 = (floor(code / 8) % 2) * 1.8
+    end
+    if floor(code / 16) eq 0
+      let b4 = 0
+    else
+      let b4 = (floor(code / 16) % 2) * 1.8
+    end
+    if floor(code / 32) eq 0
+      let b5 = 0
+    else
+      let b5 = (floor(code / 32) % 2) * 1.8
+    end
+    if floor(code / 64) eq 0
+      let b6 = 0
+    else
+      let b6 = (floor(code / 64) % 2) * 1.8
+    end
+
+    alter V0 $&b0
+    alter V1 $&b1
+    alter V2 $&b2
+    alter V3 $&b3
+    alter V4 $&b4
+    alter V5 $&b5
+    alter V6 $&b6
+    save all
+    op
+    
+    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/dac_with_external_bias_gen/test_15/ieeeDAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Vib) i(Viout)
+    if code eq 0
+      set appendwrite
+      set wr_vecnames = FALSE
+    end
+    let code = code + 1
+  end
+  reset
+  set appendwrite = FALSE
+  set wr_vecnames
+  let run = run + 1
+end
+
+let Ibias = Ibias * 2
+end
 .endc"}
