@@ -18,8 +18,8 @@ L 4 30 -20 50 -20 {}
 L 4 -50 0 -30 0 {}
 L 4 -50 -20 -30 -20 {}
 L 4 -50 20 -30 20 {}
-B 5 -2.5 -52.5 2.5 -47.5 {name=VP dir=inout}
-B 5 -2.5 47.5 2.5 52.5 {name=VN dir=inout}
+B 5 -2.5 -52.5 2.5 -47.5 {name=VDD dir=inout}
+B 5 -2.5 47.5 2.5 52.5 {name=GND dir=inout}
 B 5 47.5 -22.5 52.5 -17.5 {name=Iout dir=inout}
 B 5 -52.5 -2.5 -47.5 2.5 {name=Vcn dir=in}
 B 5 -52.5 -22.5 -47.5 -17.5 {name=Idac dir=in}
