@@ -6,69 +6,69 @@ V {}
 S {}
 E {}
 N 450 -160 450 -150 {
-lab=Vp}
+lab=VDD}
 N 450 -150 490 -150 {
-lab=Vp}
+lab=VDD}
 N 490 -190 490 -150 {
-lab=Vp}
+lab=VDD}
 N 480 -190 490 -190 {
-lab=Vp}
+lab=VDD}
 N 450 -20 450 -10 {
-lab=Vn}
+lab=GND}
 N 450 -10 490 -10 {
-lab=Vn}
+lab=GND}
 N 490 -50 490 -10 {
-lab=Vn}
+lab=GND}
 N 480 -50 490 -50 {
-lab=Vn}
+lab=GND}
 N 450 120 450 130 {
-lab=Vn}
+lab=GND}
 N 450 130 490 130 {
-lab=Vn}
+lab=GND}
 N 490 90 490 130 {
-lab=Vn}
+lab=GND}
 N 480 90 490 90 {
-lab=Vn}
+lab=GND}
 N 450 230 450 240 {
-lab=Vn}
+lab=GND}
 N 450 240 490 240 {
-lab=Vn}
+lab=GND}
 N 490 200 490 240 {
-lab=Vn}
+lab=GND}
 N 480 200 490 200 {
-lab=Vn}
+lab=GND}
 N -450 -160 -450 -150 {
-lab=Vp}
+lab=VDD}
 N -490 -150 -450 -150 {
-lab=Vp}
+lab=VDD}
 N -490 -190 -490 -150 {
-lab=Vp}
+lab=VDD}
 N -490 -190 -480 -190 {
-lab=Vp}
+lab=VDD}
 N -450 -20 -450 -10 {
-lab=Vn}
+lab=GND}
 N -490 -10 -450 -10 {
-lab=Vn}
+lab=GND}
 N -490 -50 -490 -10 {
-lab=Vn}
+lab=GND}
 N -490 -50 -480 -50 {
-lab=Vn}
+lab=GND}
 N -450 120 -450 130 {
-lab=Vn}
+lab=GND}
 N -490 130 -450 130 {
-lab=Vn}
+lab=GND}
 N -490 90 -490 130 {
-lab=Vn}
+lab=GND}
 N -490 90 -480 90 {
-lab=Vn}
+lab=GND}
 N -450 230 -450 240 {
-lab=Vn}
+lab=GND}
 N -490 240 -450 240 {
-lab=Vn}
+lab=GND}
 N -490 200 -490 240 {
-lab=Vn}
+lab=GND}
 N -490 200 -480 200 {
-lab=Vn}
+lab=GND}
 N -420 -190 -380 -190 {
 lab=#net1}
 N -420 -50 -380 -50 {
@@ -116,15 +116,15 @@ lab=Vbn}
 N -150 -10 150 -10 {
 lab=Vbn}
 N -320 -190 -280 -190 {
-lab=Vp}
+lab=VDD}
 N -120 -190 -80 -190 {
-lab=Vp}
+lab=VDD}
 N -220 -190 -180 -190 {
 lab=Vbn}
 N 80 -190 120 -190 {
-lab=Vp}
+lab=VDD}
 N 280 -190 320 -190 {
-lab=Vp}
+lab=VDD}
 N 180 -190 220 -190 {
 lab=#net2}
 N -20 90 20 90 {
@@ -182,9 +182,9 @@ lab=#net2}
 N -20 -50 20 -50 {
 lab=Vbp}
 N -120 -50 -80 -50 {
-lab=Vn}
+lab=GND}
 N 80 -50 120 -50 {
-lab=Vn}
+lab=GND}
 N -20 -190 -10 -190 {
 lab=#net1}
 N -10 -260 -10 -190 {
@@ -236,9 +236,9 @@ lab=Vbp}
 N 180 -50 190 -50 {
 lab=Vbn}
 N -100 90 -80 90 {
-lab=Vn}
+lab=GND}
 N 80 90 100 90 {
-lab=Vn}
+lab=GND}
 N -320 -50 -280 -50 {
 lab=R}
 N -320 90 -280 90 {
@@ -958,23 +958,19 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} -80 -310 3 0 {name=p1 sig_type=std_logic lab=Vp}
-C {devices/lab_pin.sym} 80 -320 1 0 {name=p2 sig_type=std_logic lab=Vn}
-C {devices/lab_pin.sym} 490 -170 2 0 {name=p3 sig_type=std_logic lab=Vp}
-C {devices/lab_pin.sym} 490 -30 2 0 {name=p5 sig_type=std_logic lab=Vn}
-C {devices/lab_pin.sym} 490 110 2 0 {name=p10 sig_type=std_logic lab=Vn}
-C {devices/lab_pin.sym} 490 220 2 0 {name=p11 sig_type=std_logic lab=Vn}
-C {devices/lab_pin.sym} -490 -170 2 1 {name=p12 sig_type=std_logic lab=Vp}
-C {devices/lab_pin.sym} -490 -30 2 1 {name=p13 sig_type=std_logic lab=Vn}
-C {devices/lab_pin.sym} -490 110 2 1 {name=p14 sig_type=std_logic lab=Vn}
-C {devices/lab_pin.sym} -490 220 2 1 {name=p15 sig_type=std_logic lab=Vn}
-C {devices/lab_pin.sym} -300 -190 1 0 {name=p16 sig_type=std_logic lab=Vp}
-C {devices/lab_pin.sym} -100 -190 1 0 {name=p17 sig_type=std_logic lab=Vp}
-C {devices/lab_pin.sym} 100 -190 1 0 {name=p18 sig_type=std_logic lab=Vp}
-C {devices/lab_pin.sym} 300 -190 1 0 {name=p19 sig_type=std_logic lab=Vp}
-C {devices/lab_pin.sym} -100 -50 3 0 {name=p20 sig_type=std_logic lab=Vn}
-C {devices/lab_pin.sym} 100 -50 3 0 {name=p21 sig_type=std_logic lab=Vn}
-C {devices/lab_pin.sym} -100 90 1 0 {name=p22 sig_type=std_logic lab=Vn}
-C {devices/lab_pin.sym} 100 90 1 0 {name=p23 sig_type=std_logic lab=Vn}
-C {madvlsi/vdd.sym} -80 -310 0 0 {name=l1 lab=VDD}
-C {madvlsi/gnd.sym} 80 -320 0 0 {name=l2 lab=GND}
+C {madvlsi/vdd.sym} -490 -170 3 0 {name=l4 lab=VDD}
+C {madvlsi/vdd.sym} -300 -190 0 0 {name=l5 lab=VDD}
+C {madvlsi/vdd.sym} -100 -190 0 0 {name=l6 lab=VDD}
+C {madvlsi/vdd.sym} 100 -190 0 0 {name=l7 lab=VDD}
+C {madvlsi/vdd.sym} 300 -190 0 0 {name=l8 lab=VDD}
+C {madvlsi/vdd.sym} 490 -170 1 0 {name=l9 lab=VDD}
+C {madvlsi/gnd.sym} -490 -30 1 0 {name=l10 lab=GND}
+C {madvlsi/gnd.sym} -490 110 1 0 {name=l11 lab=GND}
+C {madvlsi/gnd.sym} -490 220 1 0 {name=l12 lab=GND}
+C {madvlsi/gnd.sym} 490 -30 3 0 {name=l13 lab=GND}
+C {madvlsi/gnd.sym} 490 110 3 0 {name=l14 lab=GND}
+C {madvlsi/gnd.sym} 490 220 3 0 {name=l15 lab=GND}
+C {madvlsi/gnd.sym} -100 -50 0 0 {name=l1 lab=GND}
+C {madvlsi/gnd.sym} 100 -50 0 0 {name=l2 lab=GND}
+C {madvlsi/gnd.sym} -100 90 2 0 {name=l3 lab=GND}
+C {madvlsi/gnd.sym} 100 90 2 0 {name=l16 lab=GND}
