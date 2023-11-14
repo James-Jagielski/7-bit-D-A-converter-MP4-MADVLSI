@@ -3,18 +3,25 @@ Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v
 Equate elements:  no current cell.
 Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
 
-Class ieee_DAC_ladder.spice (0):  Merged 49 parallel devices.
-Class LDS_ieee_DAC.spice (1):  Merged 49 parallel devices.
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Class Output_stage.spice (0):  Merged 9 parallel devices.
+Class LDS_Output_stage.spice (1):  Merged 9 parallel devices.
 Subcircuit summary:
-Circuit 1: ieee_DAC_ladder.spice           |Circuit 2: LDS_ieee_DAC.spice              
+Circuit 1: Output_stage.spice              |Circuit 2: LDS_Output_stage.spice          
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__nfet_01v8 (86->37)           |sky130_fd_pr__nfet_01v8 (86->37)           
-Number of devices: 37                      |Number of devices: 37                      
-Number of nets: 32                         |Number of nets: 32                         
+sky130_fd_pr__nfet_01v8 (14->9)            |sky130_fd_pr__nfet_01v8 (14->9)            
+sky130_fd_pr__pfet_01v8 (16->12)           |sky130_fd_pr__pfet_01v8 (16->12)           
+Number of devices: 21                      |Number of devices: 21                      
+Number of nets: 17                         |Number of nets: 17                         
 ---------------------------------------------------------------------------------------
-Netlists match uniquely.
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match with 9 symmetries.
 Cells have no pins;  pin matching not needed.
-Device classes ieee_DAC_ladder.spice and LDS_ieee_DAC.spice are equivalent.
+Device classes Output_stage.spice and LDS_Output_stage.spice are equivalent.
 
 Final result: Circuits match uniquely.
 .

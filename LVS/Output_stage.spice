@@ -1,0 +1,35 @@
+* NGSPICE file created from Output_stage.ext - technology: sky130A
+
+
+X0 a_2320_n30# a_720_1490# GND GND sky130_fd_pr__nfet_01v8 ad=1.5 pd=6.5 as=3 ps=13 w=6 l=0.5
+X1 Idac Vbn a_720_1490# GND sky130_fd_pr__nfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X2 GND GND GND GND sky130_fd_pr__nfet_01v8 ad=3 pd=13 as=24 ps=104 w=6 l=0.5
+X3 a_3120_1490# Vcp Vbias VDD sky130_fd_pr__pfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X4 Idump a_220_n60# GND GND sky130_fd_pr__nfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X5 VDD VDD VDD VDD sky130_fd_pr__pfet_01v8 ad=1.5 pd=6.5 as=30 ps=130 w=6 l=0.5
+X6 GND a_720_1490# a_2720_n30# GND sky130_fd_pr__nfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X7 a_2120_1490# Vcp Iout VDD sky130_fd_pr__pfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X8 Idac a_720_1490# GND GND sky130_fd_pr__nfet_01v8 ad=1.5 pd=6.5 as=3 ps=13 w=6 l=0.5
+X9 a_220_n60# Vbp VDD VDD sky130_fd_pr__pfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X10 Vbias Vcp a_2720_1490# VDD sky130_fd_pr__pfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X11 a_720_1490# Vbp VDD VDD sky130_fd_pr__pfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X12 GND a_220_n60# Idump GND sky130_fd_pr__nfet_01v8 ad=3 pd=13 as=1.5 ps=6.5 w=6 l=0.5
+X13 GND GND GND GND sky130_fd_pr__nfet_01v8 ad=1.5 pd=6.5 as=0 ps=0 w=6 l=0.5
+X14 VDD Vbp Iout VDD sky130_fd_pr__pfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X15 Iout Vcp a_1720_1490# VDD sky130_fd_pr__pfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X16 Iout Vbn a_2320_n30# GND sky130_fd_pr__nfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X17 GND a_720_1490# Idac GND sky130_fd_pr__nfet_01v8 ad=3 pd=13 as=1.5 ps=6.5 w=6 l=0.5
+X18 VDD VDD VDD VDD sky130_fd_pr__pfet_01v8 ad=3 pd=13 as=0 ps=0 w=6 l=0.5
+X19 a_220_n60# Vbn Idump GND sky130_fd_pr__nfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X20 a_720_1490# Vbn Idac GND sky130_fd_pr__nfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X21 VDD Iout a_3120_1490# VDD sky130_fd_pr__pfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X22 VDD Iout a_2120_1490# VDD sky130_fd_pr__pfet_01v8 ad=3 pd=13 as=1.5 ps=6.5 w=6 l=0.5
+X23 a_2720_1490# Iout VDD VDD sky130_fd_pr__pfet_01v8 ad=1.5 pd=6.5 as=3 ps=13 w=6 l=0.5
+X24 a_2720_n30# Vbn Iout GND sky130_fd_pr__nfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X25 VDD Vbp a_220_n60# VDD sky130_fd_pr__pfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X26 VDD Vbp a_720_1490# VDD sky130_fd_pr__pfet_01v8 ad=3 pd=13 as=1.5 ps=6.5 w=6 l=0.5
+X27 Iout Vbp VDD VDD sky130_fd_pr__pfet_01v8 ad=1.5 pd=6.5 as=3 ps=13 w=6 l=0.5
+X28 a_1720_1490# Iout VDD VDD sky130_fd_pr__pfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+X29 Idump Vbn a_220_n60# GND sky130_fd_pr__nfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
+
+
