@@ -171,7 +171,7 @@ C {madvlsi/tt_models.sym} 365 -645 0 0 {
 name=TT_MODELS
 only_toplevel=false
 value=".option wnflag=1
-.param MC_SWITCH=1.0
+.param MC_SWITCH=0.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
 C {madvlsi/ammeter2.sym} 160 -440 0 0 {name=Vib}
@@ -183,7 +183,7 @@ C {madvlsi/vsource.sym} 490 -220 0 0 {name=Viout
 value=.9}
 C {madvlsi/gnd.sym} 490 -190 0 0 {name=l15 lab=GND}
 C {madvlsi/pmos3.sym} 450 -330 0 1 {name=M2
-L=0.5
+L=1.5
 W=12
 body=VDD
 nf=1
@@ -198,7 +198,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} 530 -330 2 1 {name=M3
-L=0.5
+L=1.5
 W=12
 body=VDD
 nf=1
@@ -213,7 +213,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} 450 -390 0 1 {name=M4
-L=0.5
+L=1.5
 W=12
 body=VDD
 nf=1
@@ -228,7 +228,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} 530 -390 2 1 {name=M5
-L=0.5
+L=1.5
 W=12
 body=VDD
 nf=1
@@ -244,7 +244,7 @@ spiceprefix=X
 }
 C {madvlsi/vdd.sym} 480 -420 0 0 {name=l18 lab=VDD}
 C {madvlsi/pmos3.sym} -500 -570 0 0 {name=M6
-L=0.5
+L=1.5
 W=12
 body=VDD
 nf=1
@@ -259,7 +259,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} -500 -480 0 0 {name=M7
-L=0.5
+L=1.5
 W=12
 body=VDD
 nf=1
@@ -274,7 +274,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} -340 -480 2 0 {name=M9
-L=0.5
+L=1.5
 W=12
 body=VDD
 nf=1
@@ -289,7 +289,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} -500 -380 2 0 {name=M10
-L=0.5
+L=1.5
 W=0.75
 body=GND
 nf=1
@@ -304,7 +304,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} -340 -380 0 0 {name=M11
-L=0.5
+L=1.5
 W=12
 body=GND
 nf=1
@@ -324,7 +324,7 @@ C {madvlsi/gnd.sym} -340 -350 0 0 {name=l21 lab=GND}
 C {devices/lab_pin.sym} -90 -480 3 0 {name=p18 sig_type=std_logic lab=Vcp}
 C {devices/lab_pin.sym} -40 -670 3 0 {name=p19 sig_type=std_logic lab=Vbp}
 C {madvlsi/pmos3.sym} -500 -220 0 1 {name=M8
-L=0.5
+L=1.5
 W=0.75
 body=VDD
 nf=1
@@ -339,7 +339,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} -340 -220 2 1 {name=M12
-L=0.5
+L=1.5
 W=12
 body=VDD
 nf=1
@@ -354,7 +354,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} -340 -120 0 1 {name=M13
-L=0.5
+L=1.5
 W=12
 body=GND
 nf=1
@@ -369,7 +369,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} -500 -120 2 1 {name=M14
-L=0.5
+L=1.5
 W=12
 body=GND
 nf=1
@@ -384,7 +384,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} -500 -30 2 1 {name=M15
-L=0.5
+L=1.5
 W=12
 body=GND
 nf=1
@@ -404,7 +404,7 @@ C {madvlsi/gnd.sym} -500 0 0 0 {name=l27 lab=GND}
 C {devices/lab_pin.sym} -300 -120 2 0 {name=p20 sig_type=std_logic lab=Vcn}
 C {devices/lab_pin.sym} 610 -330 2 0 {name=p2 sig_type=std_logic lab=Vcp}
 C {madvlsi/pmos3.sym} 160 -550 2 1 {name=M1
-L=0.5
+L=1.5
 W=12
 body=VDD
 nf=1
@@ -419,7 +419,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} 160 -610 2 1 {name=M16
-L=0.5
+L=1.5
 W=12
 body=VDD
 nf=1
@@ -446,7 +446,7 @@ let Ibias = 30n
 dowhile Ibias < Ibias_max
 alter Ib $&Ibias
 
-let mc_runs = 3
+let mc_runs = 1
 let run = 1
 dowhile run <= mc_runs
 

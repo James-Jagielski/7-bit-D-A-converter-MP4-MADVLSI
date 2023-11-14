@@ -27,6 +27,12 @@ N 490 -270 490 -250 {
 lab=#net4}
 N 430 -270 490 -270 {
 lab=#net4}
+N 100 -580 130 -580 {
+lab=#net5}
+N 160 -550 160 -520 {
+lab=Vib}
+N -20 -560 -0 -560 {
+lab=#net6}
 C {madvlsi/vdd.sym} 140 -400 0 0 {name=l1 lab=VDD}
 C {madvlsi/gnd.sym} 140 -200 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 80 -340 0 0 {name=p3 sig_type=std_logic lab=V1}
@@ -76,9 +82,6 @@ value=".option wnflag=1
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
 C {madvlsi/ammeter2.sym} 160 -440 0 0 {name=Vib}
-C {madvlsi/isource.sym} 160 -550 0 0 {name=I1
-value=10u}
-C {madvlsi/vdd.sym} 160 -580 0 0 {name=l16 lab=VDD}
 C {devices/lab_pin.sym} 160 -470 0 0 {name=p1 sig_type=std_logic lab=Vib}
 C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/ieee DAC/Output_stage.sym} 380 -250 0 0 {name=x2}
 C {madvlsi/gnd.sym} 380 -200 0 0 {name=l2 lab=GND}
@@ -97,7 +100,7 @@ let Ibias = 30n
 dowhile Ibias < Ibias_max
 alter Ib $&Ibias
 
-let mc_runs = 10
+let mc_runs = 1
 let run = 1
 dowhile run <= mc_runs
 
@@ -149,7 +152,7 @@ dowhile run <= mc_runs
     save all
     op
     
-    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/dac_with_external_bias_gen/test_15/ieeeDAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Vib) i(Viout)
+    wrdata ~/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/simulations/ieee_DAC/dac_with_external_bias_gen/test_16/ieeeDAC_\{$&run\}.txt V0 V1 V2 V3 V4 V5 V6 i(Vib) i(Viout)
     if code eq 0
       set appendwrite
       set wr_vecnames = FALSE
@@ -165,3 +168,26 @@ end
 let Ibias = Ibias * 2
 end
 .endc"}
+C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias_for_lvs.sym} 50 -560 0 0 {name=x1}
+C {madvlsi/pmos3.sym} 160 -580 0 0 {name=M1
+L=0.5
+W=12
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/vdd.sym} 160 -610 0 0 {name=l14 lab=VDD}
+C {madvlsi/vdd.sym} 50 -610 0 0 {name=l16 lab=VDD}
+C {madvlsi/gnd.sym} 50 -510 0 0 {name=l17 lab=GND}
+C {madvlsi/gnd.sym} -20 -500 0 0 {name=l18 lab=GND}
+C {madvlsi/resistor.sym} -20 -530 0 0 {name=R1
+value=100k
+m=1}
