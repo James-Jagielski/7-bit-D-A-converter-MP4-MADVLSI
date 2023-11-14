@@ -53,10 +53,6 @@ N -70 10 -50 10 {
 lab=Vcn}
 N -70 -40 -70 10 {
 lab=Vcn}
-N -400 -650 -350 -650 {
-lab=#net6}
-N -400 -650 -400 -640 {
-lab=#net6}
 N -230 -150 -180 -150 {
 lab=#net7}
 N -230 -150 -230 -140 {
@@ -232,13 +228,6 @@ spiceprefix=X
 C {devices/ipin.sym} -70 -40 1 0 {name=p5 lab=Vcn
 L=0.5
 W=12}
-C {madvlsi/resistor.sym} -400 -610 0 0 {name=R1
-value=100k
-m=1}
-C {madvlsi/gnd.sym} -400 -580 0 0 {name=l16 lab=GND}
-C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias_for_lvs.sym} -300 -650 0 0 {name=x4}
-C {madvlsi/vdd.sym} -300 -700 0 0 {name=l17 lab=VDD}
-C {madvlsi/gnd.sym} -300 -600 0 0 {name=l24 lab=GND}
 C {madvlsi/resistor.sym} -230 -110 0 0 {name=R2
 value=100k
 m=1}

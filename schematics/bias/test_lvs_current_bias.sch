@@ -61,18 +61,18 @@ N 120 -170 180 -170 {
 lab=Vbp}
 N 110 20 180 20 {
 lab=Vcp}
-C {madvlsi/vsource.sym} 360 -100 0 0 {name=VDD
+C {madvlsi/vsource.sym} 40 130 0 0 {name=VDD
 value=1.8}
-C {madvlsi/vdd.sym} 360 -130 0 0 {name=l1 lab=VDD}
-C {madvlsi/gnd.sym} 360 -70 0 0 {name=l3 lab=GND}
-C {madvlsi/tt_models.sym} 460 -180 0 0 {
+C {madvlsi/vdd.sym} 40 100 0 0 {name=l1 lab=VDD}
+C {madvlsi/gnd.sym} 40 160 0 0 {name=l3 lab=GND}
+C {madvlsi/tt_models.sym} 300 -180 0 0 {
 name=TT_MODELS
 only_toplevel=false
 value=".option wnflag=1
 .param MC_SWITCH=1.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {devices/code_shown.sym} 470 -20 0 0 {name=SPICE only_toplevel=false value=".save all
+C {devices/code_shown.sym} 310 -20 0 0 {name=SPICE only_toplevel=false value=".save all
 .control
   dc VDD 0 1.8 0.01 Vioutp 0 0.5 0.1
   run

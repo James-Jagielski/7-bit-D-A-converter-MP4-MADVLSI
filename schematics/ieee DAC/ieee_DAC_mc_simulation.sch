@@ -76,7 +76,7 @@ let Ibias = 30n
 dowhile Ibias < Ibias_max
 alter Ib $&Ibias
 
-let mc_runs = 1
+let mc_runs = 10
 let run = 1
 dowhile run <= mc_runs
 
