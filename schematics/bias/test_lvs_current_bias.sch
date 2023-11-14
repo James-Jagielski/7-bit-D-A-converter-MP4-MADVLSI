@@ -69,12 +69,12 @@ C {madvlsi/tt_models.sym} 460 -180 0 0 {
 name=TT_MODELS
 only_toplevel=false
 value=".option wnflag=1
-.param MC_SWITCH=0.0
+.param MC_SWITCH=1.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
 C {devices/code_shown.sym} 470 -20 0 0 {name=SPICE only_toplevel=false value=".save all
 .control
-  dc VDD 0 2.5 0.01 Vioutp 0 0.5 0.1
+  dc VDD 0 1.8 0.01 Vioutp 0 0.5 0.1
   run
   plot i(Vioutp)
   plot v(Vbn) v(Vbp) v(Vnode)-v(Vcp) v(Vdd)-v(Vnode) v(Vdd)-v(Vbp)
@@ -83,12 +83,12 @@ C {madvlsi/vsource.sym} 210 80 0 0 {name=Vioutp
 value=0}
 C {madvlsi/gnd.sym} 210 110 0 0 {name=l7 lab=GND}
 C {madvlsi/resistor.sym} -200 -110 0 0 {name=R1
-value=5k
+value=100k
 m=1}
 C {madvlsi/gnd.sym} -200 -80 0 0 {name=l11 lab=GND}
 C {/home/madvlsi/dev/git/7-bit-D-A-converter-MP4-MADVLSI/schematics/bias/current_bias_for_lvs.sym} -100 -150 0 0 {name=x1}
 C {madvlsi/pmos3.sym} -300 -70 0 0 {name=M5
-L=3
+L=0.5
 W=12
 body=VDD
 nf=1
@@ -103,7 +103,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} -300 20 0 0 {name=M6
-L=3
+L=0.5
 W=12
 body=VDD
 nf=1
@@ -118,7 +118,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} -140 20 2 0 {name=M9
-L=3
+L=0.5
 W=12
 body=VDD
 nf=1
@@ -133,7 +133,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} -300 220 2 0 {name=M10
-L=3
+L=0.5
 W=0.75
 body=GND
 nf=1
@@ -148,7 +148,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} -140 220 0 0 {name=M11
-L=3
+L=0.5
 W=12
 body=GND
 nf=1
@@ -169,7 +169,7 @@ C {madvlsi/vdd.sym} -100 -200 0 0 {name=l16 lab=VDD}
 C {madvlsi/gnd.sym} -100 -100 0 0 {name=l19 lab=GND}
 C {devices/lab_pin.sym} -100 60 2 0 {name=p4 sig_type=std_logic lab=Vcp}
 C {madvlsi/pmos3.sym} 210 20 0 0 {name=M4
-L=3
+L=0.5
 W=12
 body=VDD
 nf=1
@@ -184,7 +184,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} 210 -170 0 0 {name=M7
-L=3
+L=0.5
 W=12
 body=VDD
 nf=1
