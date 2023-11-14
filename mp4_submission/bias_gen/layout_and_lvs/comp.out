@@ -1,0 +1,25 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Class current_bias_magic.spice (0):  Merged 29 parallel devices.
+Class current_bias_layout_driven.spice (1):  Merged 29 parallel devices.
+Subcircuit summary:
+Circuit 1: current_bias_magic.spice        |Circuit 2: current_bias_layout_driven.spic 
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (10->6)            |sky130_fd_pr__pfet_01v8 (10->6)            
+sky130_fd_pr__nfet_01v8 (30->5)            |sky130_fd_pr__nfet_01v8 (30->5)            
+Number of devices: 11                      |Number of devices: 11                      
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes current_bias_magic.spice and current_bias_layout_driven.spice are equivalent.
+
+Final result: Circuits match uniquely.
+.

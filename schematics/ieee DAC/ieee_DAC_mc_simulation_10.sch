@@ -227,3 +227,4 @@ C {devices/code_shown.sym} 580 -490 0 0 {name=SPICE only_toplevel=false value=".
   run
   plot i(Vout)
 .endc"}
+C {devices/lab_pin.sym} 330 -250 0 0 {name=p17 sig_type=std_logic lab=Vcn}
